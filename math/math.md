@@ -11,3 +11,5 @@ has_children: true
 - Thống kê
 - Xác suất
 - Thống kê
+## Table of contents
+{: .no_toc .text-delta }
