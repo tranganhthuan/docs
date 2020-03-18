@@ -1,2 +1,9 @@
 remote_theme: pmarsceill/just-the-docs
 title: docs.ml
+aux_links:
+  "docs.ml GitHub":
+    - "//github.com/trangnguyenanhthuan/docs"
+# Enable or disable the site search
+search_enabled: true
+# Set the search token separator
+search_tokenizer_separator: /[\s/]+/
