@@ -18,7 +18,7 @@ Gmail: trangnguyenanhthuan@gmail.com
 
 Github: github.com/trangnguyenanhthuan
 
-LinkedIn:
+LinkedIn: linkedin.com/in/thuan-trang-a6910b188/
 
 **Employment History**
 
@@ -27,9 +27,6 @@ None
 **Education**
 
 - Bachelor of Information Technology,RMIT University,Vietnam
-
-2018-2021
-{: .fs-2 }
 
 **Skills**
 
