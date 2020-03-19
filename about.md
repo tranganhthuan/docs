@@ -25,7 +25,7 @@ IT student
 
 **Education**
 
-- Bachelor of Information Technology,RMIT University,Vietnam
+- Bachelor of Information Technology - RMIT University,Vietnam
 
 **Skills**
 
