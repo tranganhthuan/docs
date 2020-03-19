@@ -8,4 +8,5 @@ nav_order: 1
 
 ## Test
 Test thử công thức:
+
 $$X$$
