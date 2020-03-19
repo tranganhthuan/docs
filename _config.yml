@@ -1,5 +1,6 @@
 remote_theme: pmarsceill/just-the-docs
 title: docs.ml
+url: "https://docs.ml"
 aux_links:
   "docs.ml GitHub":
     - "//github.com/trangnguyenanhthuan/docs"
