@@ -2,11 +2,10 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+has_toc: false
 permalink: /
 ---
 
-Một web về ml và toán
-Test thử coi có thay đổi không
+# docs.ml
 
-Sao chữ bự dữ vậy.
+Website tập trung vào học machine learning từ cơ bản bao gồm cả những kiến thức toán cần thiết. Những thuật toán sẽ được diễn giải thông qua các ví dụ thực tế.
