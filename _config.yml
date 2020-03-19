@@ -7,5 +7,3 @@ aux_links:
 search_enabled: true
 # Set the search token separator
 search_tokenizer_separator: /[\s/]+/
-# Enable Katex
-markdown: kramdown
