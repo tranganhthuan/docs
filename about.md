@@ -8,21 +8,20 @@ has_toc: false
 ## Trang Nguyen Anh Thuan
 
 IT student
-{: .fs-2 }
 
 <hr/>
 
 **Info**
 
-Gmail: trangnguyenanhthuan@gmail.com
+- Gmail: trangnguyenanhthuan@gmail.com
 
-Github: github.com/trangnguyenanhthuan
+- Github: github.com/trangnguyenanhthuan
 
-LinkedIn: linkedin.com/in/thuan-trang-a6910b188/
+- LinkedIn: linkedin.com/in/thuan-trang-a6910b188/
 
 **Employment History**
 
-None
+(None)
 
 **Education**
 
