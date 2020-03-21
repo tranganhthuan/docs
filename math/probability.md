@@ -3,7 +3,6 @@ layout: default
 title: Probability
 parent: Math
 nav_order: 1
-published: true
 ---
 ## Table of contents
 {: .no_toc .text-delta }
