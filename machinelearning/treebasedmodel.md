@@ -33,7 +33,7 @@ Ví dụ ta có bảng về các học sinh như sau:
 | Không | Tốt | Không |
 | Có | Tốt | Có |
 | Có | Kém | Có |
-| Có | Tốt | Có |
+| Có | Kém | Có |
 | Không | Tốt | Có |
 
 Lần này ta sẽ dự đoán một học sinh có qua môn hay không dựa vào yếu tố học sinh có học bài trước khi thi không và thành tích có học sinh này.
@@ -58,6 +58,9 @@ Từ 2 cột **Học bài** và **Qua môn**, ta được 2 node: Đậu và R�
 - Node Đậu bao gồm: có - 3, không - 1. Với Gini index = $$1 -(0.75^2 + 0.25^2) = 0.375$$
 - Node Rớt bao gồm: có - 1, không - 1. Với Gini index = $$1 -(0.5^2 + 0.5^2) = 0.5$$
 
-Sau đó lấy trung bình có trọng số của 2 node này $$\frac{4}{6}0.375 + \frac{2}{6}0.5 = 1.22$$
+Sau đó lấy trung bình có trọng số của 2 node này $$\frac{4}{6}0.375 + \frac{2}{6}0.5 = 0.4$$
 
+$$0.4$$ chính là Gini index của cột **Học bài**. 
+
+Tương tự, ta được Gini index của cột **Thành tích** là
 
