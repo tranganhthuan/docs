@@ -20,6 +20,8 @@ parent: Machine Learning
 
 ## Decision Tree - Classification
 Đây là thuật toán đơn giản nhất trong các tree-based model, làm nền tảng cho các thuật toán sau này.
+
+Một số thuật ngữ cơ bản:
 ![](https://miro.medium.com/max/592/0*X-UrBzBeKMnoTY6H.png)
 
 
@@ -42,15 +44,11 @@ Model dự đoán cho dữ liệu trên sẽ có dạng như sau:
 Trước tiên, thuật toán sẽ tìm ra câu hỏi tốt nhất - câu hỏi sẽ chia được nhiều dữ liệu nhất. Vậy làm sao để model có thể đánh giá được câu hỏi là tốt hay không. Để làm được điều này ta tìm hiểu 2 phương pháp đánh giá là: Gini index và Entropy.
 
 |:-------:|
-| Công thức gini index: <br/>
-$$1 - \sum_{i=1}^{n} p_i^2$$
+| Công thức gini index: <br/> $$1 - \sum_{i=1}^{n} p_i^2$$ <br/> Công thức entropy: <br/>$$ - \sum_{i=1}^{n} p_i log(p_i)$$ |
 
-Công thức entropy: <br/>
-$$ - \sum_{i=1}^{n} p_i log(p_i)$$ |
+Ví dụ ta tính gini index cho cột **Học bài** ở bảng trên:
+Từ 2 cột **Học bài** và **Qua môn**, ta được:
 
-
-
-Ví dụ ta tính gini cho cột Học bài ở bảng trên
 
 
 
