@@ -128,3 +128,13 @@ Vẽ sơ đồ các điểm trên:
 
 Tiếp theo ta cũng chia node thành 2 node nhỏ hơn như Decision Tree - Classification.
 ![](/assets/images/plot2.png)
+
+Ở hình trên ta thấy dữ liệu được chia thành 2 node:
+- Node 1: Gồm dòng thứ 4 với giá trị [2,2].
+- Node 2: Gồm các dòng còn lại.
+
+Đi tính giá trị trung bình của từng node ta được: $$mean_1 = 2$$, $$mean_2 = (10+10+5+7+2)/5 = 6.8$$. 
+
+Áp dụng MSE vào để tính trung bình tổng khoảng cách từ mỗi điểm trong node để mean của nó.
+
+- Node1: $$$$
