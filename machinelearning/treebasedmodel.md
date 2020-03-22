@@ -66,8 +66,9 @@ Tương tự, ta được Gini index của cột **Thành tích** là: $$0.5$$
 
 Ta chọn cột có Gini index thấp nhất để làm câu hỏi. Làm tương tự với entropy
 
-Mở rộng ra:
+> Mở rộng ra:
+> - Nếu giá trị của cột trên là categorical, thì ta $$p_i$$ sẽ là xác suất của mỗi category.
+> - Nếu giá trị trên là số phải sắp xếp theo thứ tự cái giá trị trong cột. Rồi tính giá trị trung bình giữa 2 phần tử kế tiếp. Với mỗi giá trị trung bình, ta tính Gini index hoặc Entropy. Kết quả thấp nhất sẽ là Gini index hoặc Entropy của cột.
 
-- Nếu giá trị của cột trên là categorical, thì ta $$p_i$$ sẽ là xác suất của mỗi category.
-- Nếu giá trị trên là số
+
 
