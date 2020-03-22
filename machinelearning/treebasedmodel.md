@@ -111,3 +111,20 @@ Nếu bây giờ mô hình của chúng ta không chỉ đưa ra những class c
 > $$\frac{1}{n} \sum_{i=1}^{n} (f(x_i) - y_i)^2$$
 
 Ta cùng áp dụng vào tập dữ liệu sau đây:
+
+| Chương | Điểm |
+|:------:|:----:|
+| 7 | 10 |
+| 8 | 10 |
+| 4 | 5 |
+| 2 | 2 |
+| 5 | 7 |
+| 3 | 2 |
+
+Với cột chương là số chương học sinh đã học, dựa vào số liệu này ta sẽ đoán điểm số của học sinh đó.
+
+Vẽ sơ đồ các điểm trên:
+![](/assets/images/plot1.png)
+
+Tiếp theo ta cũng chia node thành 2 node nhỏ hơn như Decision Tree - Classification.
+![](/assets/images/plot2.png)
