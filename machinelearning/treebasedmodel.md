@@ -44,11 +44,11 @@ Model dự đoán cho dữ liệu trên sẽ có dạng như sau:
 Trước tiên, thuật toán sẽ tìm ra câu hỏi tốt nhất - câu hỏi sẽ chia được nhiều dữ liệu nhất. Vậy làm sao để model có thể đánh giá được câu hỏi là tốt hay không. Để làm được điều này ta tìm hiểu 2 phương pháp đánh giá là: Gini index và Entropy.
 
 
->Công thức gini index: 
+>Công thức Gini index: 
 >
 >$$1 - \sum_{i=1}^{n} p_i^2$$ 
 >
->Công thức entropy:
+>Công thức Entropy:
 >
 >$$ - \sum_{i=1}^{n} p_i log(p_i)$$ 
 
@@ -85,7 +85,7 @@ Thành tích ở bảng trên được tính bằng số:
 Sắp xếp lại dữ liệu (4,7,8) và lấy trung bình, ta được 2 giá trị: 5.5, 7.5.
 - Trường hợp 5.5 ta có Gini index $$=0.5$$  
 - Trường hợp 7.5 ta có Gini index $$=0.25$$
-Vậy cột **Thành tích** (nếu là số sẽ có Gini index = 0.2)
+Vậy cột **Thành tích** (nếu là số) sẽ có Gini index = 0.2.
 
 Với các tập con sau khi được chia, thuật toán sẽ tiếp tục tìm, đặt câu hỏi và chia nhỏ tập dữ liệu như trên cho đến khi tập trên cho đến khi mỗi leaf chỉ còn chứa 1 class duy nhất hoặc không thể chia được nữa (có attribute giống nhau hoàn toàn nhưng label khác nhau).
 
@@ -95,3 +95,10 @@ Với các tập con sau khi được chia, thuật toán sẽ tiếp tục tìm
 >   - Trung bình có trọng số của các node leaf.
 >   - Chọn câu hỏi có kết quả nhỏ nhất.
 > - Bước 2: Áp dụng Bước 1 cho 2 tập con vừa mới được chia. Cho đến khi chỉ còn 1 class trong leaf hoặc không thể chia được nữa.
+
+## Decision Tree - Regression
+
+Nếu bây giờ mô hình của chúng ta không chỉ đưa ra những class cụ thể (hữu hạn), mà phải dự đoán các số liệu (vô hạn) thì ta phải làm sao. Điều này không khó như bạn nghĩ. Ta chỉ cần thay đổi hàm sai số từ Gini index/Entropy thành MSE (Mean squared error).
+>
+>
+Ta cùng áp dụng vào tập dữ liệu sau đây:
