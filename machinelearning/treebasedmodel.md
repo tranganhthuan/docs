@@ -64,21 +64,33 @@ $$0.4$$ chính là Gini index của cột **Học bài**.
 
 Tương tự, ta được Gini index của cột **Thành tích** là: $$0.5$$
 
-Ta chọn cột có Gini index thấp nhất để làm câu hỏi. Làm tương tự với entropy
+Ta chọn cột có Gini index thấp nhất để làm câu hỏi. Làm tương tự với Entropy.
 
 > Mở rộng ra:
-> - Nếu giá trị của cột trên là categorical, thì ta $$p_i$$ sẽ là xác suất của mỗi category.
+> - Nếu giá trị của cột trên là categorical, thì ta $$p_i$$ sẽ là xác suất của mỗi category.Tính Chia theo mỗi category rồi chọn category có kết
 > - Nếu giá trị trên là số phải sắp xếp theo thứ tự cái giá trị trong cột. Rồi tính giá trị trung bình giữa 2 phần tử kế tiếp có giá trị khác nhau. Với mỗi giá trị trung bình, ta tính Gini index hoặc Entropy. Kết quả thấp nhất sẽ là Gini index hoặc Entropy của cột.
 
 Ví dụ:
 Thành tích ở bảng trên được tính bằng số:
+
 | Thành tích | Qua môn |
 |:----------:|:-------:|
 | 4 | Không |
 | 7 | Không |
 | 8 | Có |
 | 4 | Có |
-| 8 | Có |
+| 4 | Có |
 | 7 | Có |
 
-- Sắp xếp lại dữ liệu (4,7,8) và lấy trung bình, ta được 2 giá trị: 5.5, 7.5.
+Sắp xếp lại dữ liệu (4,7,8) và lấy trung bình, ta được 2 giá trị: 5.5, 7.5.
+- Trường hợp 5.5 ta có Gini index $$=0.5$$  
+- Trường hợp 7.5 ta có Gini index $$=0.25$$
+Vậy cột **Thành tích** (nếu là số sẽ có Gini index = 0.2)
+
+Với các tập con sau khi được chia, thuật toán sẽ tiếp tục tìm, đặt câu hỏi và chia nhỏ tập dữ liệu như trên cho đến khi tập trên cho đến khi mỗi leaf chỉ còn chứa 1 class duy nhất hoặc không thể chia được nữa (có attribute giống nhau hoàn toàn nhưng label khác nhau).
+
+>Tổng kết lại, thuật toán Decision Tree làm các bước sau:
+> - Bước 1: Tính Gini index/Entropy của từng features. Để tìm ra câu hỏi tốt nhất.
+>   - Có 2 trường hợp:
+      
+> - Bước 2: Áp dụng Bước 1 cho 2 tập con vừa mới được chia. Cho đến khi chỉ còn 1 class trong leaf hoặc không thể chia được nữa.
