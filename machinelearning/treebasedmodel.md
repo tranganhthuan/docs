@@ -67,7 +67,7 @@ Tương tự, ta được Gini index của cột **Thành tích** là: $$0.5$$
 Ta chọn cột có Gini index thấp nhất để làm câu hỏi. Làm tương tự với Entropy.
 
 > Mở rộng ra:
-> - Nếu giá trị của cột trên là categorical, thì ta $$p_i$$ sẽ là xác suất của mỗi category.Tính Chia theo mỗi category rồi chọn category có kết
+> - Nếu giá trị của cột trên là categorical, thì ta $$p_i$$ sẽ là xác suất của mỗi category.Tính Gini index/Entropy chia theo mỗi category rồi chọn category có kết quả thấp nhất.
 > - Nếu giá trị trên là số phải sắp xếp theo thứ tự cái giá trị trong cột. Rồi tính giá trị trung bình giữa 2 phần tử kế tiếp có giá trị khác nhau. Với mỗi giá trị trung bình, ta tính Gini index hoặc Entropy. Kết quả thấp nhất sẽ là Gini index hoặc Entropy của cột.
 
 Ví dụ:
@@ -91,6 +91,7 @@ Với các tập con sau khi được chia, thuật toán sẽ tiếp tục tìm
 
 >Tổng kết lại, thuật toán Decision Tree làm các bước sau:
 > - Bước 1: Tính Gini index/Entropy của từng features. Để tìm ra câu hỏi tốt nhất.
->   - Có 2 trường hợp:
-      
+>   - Tính Gini index/Entropy của từng node leaf khi đã chia. 
+>   - Trung bình có trọng số của các node leaf.
+>   - Chọn câu hỏi có kết quả nhỏ nhất.
 > - Bước 2: Áp dụng Bước 1 cho 2 tập con vừa mới được chia. Cho đến khi chỉ còn 1 class trong leaf hoặc không thể chia được nữa.
