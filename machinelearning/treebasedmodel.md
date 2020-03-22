@@ -62,5 +62,12 @@ Sau đó lấy trung bình có trọng số của 2 node này $$\frac{4}{6}0.375
 
 $$0.4$$ chính là Gini index của cột **Học bài**. 
 
-Tương tự, ta được Gini index của cột **Thành tích** là
+Tương tự, ta được Gini index của cột **Thành tích** là: $$0.5$$
+
+Ta chọn cột có Gini index thấp nhất để làm câu hỏi. Làm tương tự với entropy
+
+Mở rộng ra:
+
+- Nếu giá trị của cột trên là categorical, thì ta $$p_i$$ sẽ là xác suất của mỗi category.
+- Nếu giá trị trên là số
 
