@@ -62,7 +62,7 @@ Từ 2 cột **Học bài** và **Qua môn**, ta được 2 node: Đậu và R�
 >
 > $$\sum_{i=1}^{n} w_i x_i$$
 >
-> Với $$w_i = n_child/n_parent$$, $n_{child}$ là số phần tử của node child sau khi chia, $n_{parent}$ là số phần tử của node parent trước khi chia
+> Với $$w_i = n_{child}/n_{parent}$$, $n_{child}$ là số phần tử của node child sau khi chia, $n_{parent}$ là số phần tử của node parent trước khi chia
 
 Sau đó lấy trung bình có trọng số của 2 node này $$\frac{4}{6}0.375 + \frac{2}{6}0.5 = 0.4$$
 
