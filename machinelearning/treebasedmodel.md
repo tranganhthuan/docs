@@ -55,8 +55,14 @@ Trước tiên, thuật toán sẽ tìm ra câu hỏi tốt nhất - câu hỏi 
 Ví dụ ta tính gini index cho cột **Học bài** ở bảng trên.
 
 Từ 2 cột **Học bài** và **Qua môn**, ta được 2 node: Đậu và Rớt như sau:
-- Node Đậu bao gồm: có - 3, không - 1. Với Gini index = $$1 -(0.75^2 + 0.25^2) = 0.375$$
-- Node Rớt bao gồm: có - 1, không - 1. Với Gini index = $$1 -(0.5^2 + 0.5^2) = 0.5$$
+- Node Đậu bao gồm: có - 3 ($$p = 3/(3+1) = 0.75$$), không - 1 ($$p = 1/(3+1) = 0.25$$). Với Gini index = $$1 -(0.75^2 + 0.25^2) = 0.375$$
+- Node Rớt bao gồm: có - 1 ($$p = 1/(1+1) = 0.5$$), không - 1 ($$p = 1/(1+1) = 0.5$$). Với Gini index = $$1 -(0.5^2 + 0.5^2) = 0.5$$
+
+>Công thức trung bình có trọng số (weighted mean):
+>
+> $$\sum_{i=1}^{n} w_i x_i$$
+>
+> Với $$w_i = n_child/n_parent$$, $n_{child}$ là số phần tử của node child sau khi chia, $n_{parent}$ là số phần tử của node parent trước khi chia
 
 Sau đó lấy trung bình có trọng số của 2 node này $$\frac{4}{6}0.375 + \frac{2}{6}0.5 = 0.4$$
 
@@ -98,7 +104,10 @@ Với các tập con sau khi được chia, thuật toán sẽ tiếp tục tìm
 
 ## Decision Tree - Regression
 
-Nếu bây giờ mô hình của chúng ta không chỉ đưa ra những class cụ thể (hữu hạn), mà phải dự đoán các số liệu (vô hạn) thì ta phải làm sao. Điều này không khó như bạn nghĩ. Ta chỉ cần thay đổi hàm sai số từ Gini index/Entropy thành MSE (Mean squared error).
->
->
+Nếu bây giờ mô hình của chúng ta không chỉ đưa ra những class cụ thể (hữu hạn), mà phải dự đoán các số liệu (vô hạn) thì ta phải làm sao. Điều này không khó như bạn nghĩ. Ta chỉ cần thay đổi hàm sai số từ Gini index/Entropy thành MSE (Mean squared error). Và dùng giá trị trung bình của các phần tử trong leaf làm giá trị để dự đoán.
+
+> Công thức MSE:
+> 
+> $$\frac{1}{n} \sum_{i=1}^{n} (f(x_i) - y_i)^2$$
+
 Ta cùng áp dụng vào tập dữ liệu sau đây:
