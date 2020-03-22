@@ -126,7 +126,7 @@ Với cột chương là số chương học sinh đã học, dựa vào số li
 Vẽ sơ đồ các điểm trên:
 ![](/assets/images/plot1.png)
 
-Tiếp theo ta cũng chia node thành 2 node nhỏ hơn như Decision Tree - Classification.
+Tiếp theo ta cũng chia node thành 2 node nhỏ hơn như Decision Tree - Classification. (Giống như trên ta sắp xếp các giá trị theo thứ tự rồi lấy giá trị trung bình của 2 dòng liên tiếp có giá trị khác nhau.)
 ![](/assets/images/plot2.png)
 
 Ở hình trên ta thấy dữ liệu được chia thành 2 node:
@@ -139,3 +139,17 @@ Tiếp theo ta cũng chia node thành 2 node nhỏ hơn như Decision Tree - Cla
 
 - Node 1: $$(2 - 2)^2 = 0$$
 - Node 2: $$(10 - 6.8)^2 + (10 - 6.8)^2 + (5 - 6.8)^2 + (7 - 6.8)^2 + (2 - 6.8)^2 = 46.8$$
+
+Vậy MSE của cách chia thứ nhất là $$0+46.8 = 46.8$$.
+
+Làm tương tự với các giá trị còn lại, MSE nhỏ nhất được lấy làm MSE của cột. 
+
+Nếu ngoài cột **Chương** ta còn các cột khác thì ta cũng áp dụng MSE với cái category(nếu là categorical) hoặc giá trị trung bình (nếu là số) trong các cột đó.
+
+Sau khi tính được hết tất cả MSE của các cột, ta so sánh và chọn ra MSE nhỏ nhất để đặt câu hỏi.
+
+Tiếp tục, làm vậy với các node sau khi được chia cho đến khi leaf node chỉ còn các giá trị giống nhau hoặc không chia được nữa.
+
+> Tổng kết lại ta thấy cách hoạt động của Decision Tree Regression giống hệt Classification, chỉ khác ở 2 điểm:
+> - Thứ nhất: Hàm dùng để đánh giá câu hỏi là hàm MSE.
+> - Thứ hai: Giá trị dự đoán là trung bình các giá trị trong leaf.
