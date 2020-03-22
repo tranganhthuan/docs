@@ -68,7 +68,17 @@ Ta chọn cột có Gini index thấp nhất để làm câu hỏi. Làm tương
 
 > Mở rộng ra:
 > - Nếu giá trị của cột trên là categorical, thì ta $$p_i$$ sẽ là xác suất của mỗi category.
-> - Nếu giá trị trên là số phải sắp xếp theo thứ tự cái giá trị trong cột. Rồi tính giá trị trung bình giữa 2 phần tử kế tiếp. Với mỗi giá trị trung bình, ta tính Gini index hoặc Entropy. Kết quả thấp nhất sẽ là Gini index hoặc Entropy của cột.
+> - Nếu giá trị trên là số phải sắp xếp theo thứ tự cái giá trị trong cột. Rồi tính giá trị trung bình giữa 2 phần tử kế tiếp có giá trị khác nhau. Với mỗi giá trị trung bình, ta tính Gini index hoặc Entropy. Kết quả thấp nhất sẽ là Gini index hoặc Entropy của cột.
 
+Ví dụ:
+Thành tích ở bảng trên được tính bằng số:
+| Thành tích | Qua môn |
+|:----------:|:-------:|
+| 4 | Không |
+| 7 | Không |
+| 8 | Có |
+| 4 | Có |
+| 8 | Có |
+| 7 | Có |
 
-
+- Sắp xếp lại dữ liệu (4,7,8) và lấy trung bình, ta được 2 giá trị: 5.5, 7.5.
