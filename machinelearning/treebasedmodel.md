@@ -137,4 +137,5 @@ Tiếp theo ta cũng chia node thành 2 node nhỏ hơn như Decision Tree - Cla
 
 Áp dụng MSE vào để tính trung bình tổng khoảng cách từ mỗi điểm trong node để mean của nó.
 
-- Node1: $$$$
+- Node 1: $$(2 - 2)^2 = 0$$
+- Node 2: $$(10 - 6.8)^2 + (10 - 6.8)^2 + (5 - 6.8)^2 + (7 - 6.8)^2 + (2 - 6.8)^2 = 46.8$$
