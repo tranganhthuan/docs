@@ -191,4 +191,44 @@ $$\text{num_leaf}$$: là số lượng node leaf
 
 ## Random Forest
 
-Như đã biết, decision tree gặp phải vấn đề overfiting - mặc dù fit rất tốt với dữ liệu được học nhưng khó khăn khi dự đoán dữ liệu mới. Random Forest giải quyết tốt vẫn đề này và nó vẫn giữ lại được tính dễ hiểu của Decision Tree. Như tên gọi, Random Forest là gồm nhiều model Decision Tree. Để tạo ra nhiều dữ liệu cho các model này ta dùng một kỹ thuật gọi là **Boosttrap**. Ví dụ ta muốn 
+Như đã biết, decision tree gặp phải vấn đề overfiting - mặc dù fit rất tốt với dữ liệu được học nhưng khó khăn khi dự đoán dữ liệu mới. Random Forest giải quyết tốt vẫn đề này và nó vẫn giữ lại được tính dễ hiểu của Decision Tree. Như tên gọi, Random Forest là gồm nhiều model Decision Tree. Để tạo ra nhiều dữ liệu cho các model này ta dùng một kỹ thuật gọi là **Boosttrap Sampling* - lấy mẫu có hoàn lại.
+
+> Boostrap Sampling - lấy mẫu có hoàn lại - là một kĩ thuật của Thống kê. Ta lấy một ngẫu nhiên cá thể trong tập mẫu gốc sau đó hoàn lại. Lặp lại n lần ta sẽ được một boostrapped sample có size bằng n. 
+
+Ví dụ, ở phần trước ta có bảng sau:
+
+**Original Dataset**
+
+| Chương | Điểm |
+|:------:|:----:|
+| 7 | 10 |
+| 8 | 10 |
+| 4 | 5 |
+| 2 | 2 |
+| 5 | 7 |
+| 3 | 2 |
+
+Ta lấy dòng 2,3,5,5,6,6 ra để tạo 1 boostrapped dataset có size bằng với dataset ban đầu. Thì dataset này sẽ có dạng.
+
+**Boostrapped Dataset**
+| Chương | Điểm |
+|:------:|:----:|
+| 8 | 10 |
+| 4 | 5 |
+| 5 | 7 |
+| 5 | 7 |
+| 3 | 2 |
+| 3 | 2 |
+
+Với $$k$$ boostrapped dataset ta sẽ có $$t$$ Decision Tree khác nhau. Tuy nhiên, những Decision Tree này chỉ chọn random $$k$$ features có trong boostrapped dataset.
+
+Ví dụ, ta có một boostrapped dataset như sau:
+
+| Đau tim | Ho | Nhức đầu | Kết luận |
+|:-------:|:-----:|----------|-------------|
+| Không | Có | Có | Bệnh X |
+| Có | Không | Có | Bình thường |
+| Có | Có | Có | Bệnh X |
+
+Thì với $$k$$ bằng 2 thì Decision Tree của data set này chỉ chọn ngẫu nhiên 2 trong 3 features trên (đau tim - ho hoặc ho - nhức đầu hoặc đau tim - nhức đầu).
+
