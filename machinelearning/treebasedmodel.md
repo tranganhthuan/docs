@@ -175,3 +175,5 @@ Với:
 $$w_i = n_i/N$$: là tỉ lệ giữa số lượng phần tử có trong node với tổng số phần tử
 $$l_i$$: là loss của node i
 $$#leaf$$: là số lượng node leaf
+
+Để tối ưu được hàm này, ta không thể dùng đạo hàm mà phải thử trên từng node leaf để xem model nào cho kết quả tốt nhất.
