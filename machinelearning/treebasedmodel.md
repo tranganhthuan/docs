@@ -174,9 +174,13 @@ Ta chia dataset ra làm 2 tập - trainning set, validation set. Ta fit Decision
 Ở cách làm này ta có cost function như sau:
 
 $$L = \sum_{i=1}^n w_i l_i + \lambda*\text{num_leaf}$$
+
 Với: 
+
 $$w_i = n_i/N$$: là tỉ lệ giữa số lượng phần tử có trong node với tổng số phần tử
+
 $$l_i$$: là loss của node i
+
 $$num_leaf$$: là số lượng node leaf
 
 Để tối ưu được hàm này, ta không thể dùng đạo hàm mà phải thử trên từng node leaf để xem model nào cho kết quả tốt nhất.
