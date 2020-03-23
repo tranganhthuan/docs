@@ -23,7 +23,7 @@ parent: Machine Learning
 Decision Tree (Cây quyết định) là một hệ thống gồm các câu hỏi có dạng giống như cây nhị phân. Với root node và decision node là các câu hỏi và leaf node là quyết định được đưa ra (thuật ngữ ở hình bên dưới). 
 ![](https://miro.medium.com/max/592/0*X-UrBzBeKMnoTY6H.png)
 
-Đây giống như cách mà con người đưa ra quyết định. Ví dụ như để đánh giá một học sinh có học lực như thế nào ta sẽ có Decision Tree sau đây:
+Đây giống như cách mà con người đưa ra quyết định, chính vì lý do này mà người ta thường dùng Decision Tree để hiểu thêm về tập dữ liệu. Ví dụ như để đánh giá một học sinh có học lực như thế nào ta sẽ có Decision Tree sau đây:
 ![](/assets/images/tree_example.png)
 
 ## Decision Tree - Classification
@@ -184,3 +184,12 @@ $$l_i$$: là loss của node i
 $$\text{num_leaf}$$: là số lượng node leaf
 
 Để tối ưu được hàm này, ta không thể dùng đạo hàm mà phải thử trên từng node leaf để xem model nào cho kết quả tốt nhất.
+
+> Tổng kết lại có 2 cách đơn giản để pruning:
+> - **Reduced error pruning:** đối chiếu score của model của 2 tập training set và validation set với nhau khi loại bỏ các node. 
+> - **Cost complexity pruning:** dùng lost function $$L = \sum_{i=1}^n w_i l_i + \lambda*\text{num_leaf}$$ để đánh giá model khi loại bỏ các node.
+
+## Random Forest
+
+Như đã biết, decision tree gặp phải vấn đề overfiting - mặc dù fit rất tốt với dữ liệu được học nhưng khó khăn khi dự đoán dữ liệu mới. Random Forest giải quyết tốt vẫn đề này và nó vẫn giữ lại được tính dễ hiểu của Decision Tree.
+
