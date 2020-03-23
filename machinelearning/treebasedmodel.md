@@ -22,6 +22,7 @@ parent: Machine Learning
 
 Decision Tree (Cây quyết định) là một hệ thống gồm các câu hỏi có dạng giống như cây nhị phân. Với root node và decision node là các câu hỏi và leaf node là quyết định được đưa ra (thuật ngữ ở hình bên dưới). 
 ![](https://miro.medium.com/max/592/0*X-UrBzBeKMnoTY6H.png)
+
 Đây giống như cách mà con người đưa ra quyết định. Ví dụ như để đánh giá một học sinh có học lực như thế nào ta sẽ có Decision Tree sau đây:
 ![](/assets/images/tree_example.png)
 
@@ -131,6 +132,7 @@ Vẽ sơ đồ các điểm trên:
 ![](/assets/images/plot 1.png)
 
 Tiếp theo ta cũng chia node thành 2 node nhỏ hơn như Decision Tree - Classification. (Giống như trên ta sắp xếp các giá trị theo thứ tự rồi lấy giá trị trung bình của 2 dòng liên tiếp có giá trị khác nhau.)
+
 ![](/assets/images/plot 2.png)
 
 Ở hình trên ta thấy dữ liệu được chia thành 2 node:
@@ -170,10 +172,10 @@ Ta chia dataset ra làm 2 tập - trainning set, validation set. Ta fit Decision
 
 Ở cách làm này ta có cost function như sau:
 
-$$L = \sum_{i=1}^n w_i l_i + \lambda \text{#leaf}$$
+$$L = \sum_{i=1}^n w_i l_i + \lambda*\text{num_leaf}$$
 Với: 
 $$w_i = n_i/N$$: là tỉ lệ giữa số lượng phần tử có trong node với tổng số phần tử
 $$l_i$$: là loss của node i
-$$#leaf$$: là số lượng node leaf
+$$num_leaf$$: là số lượng node leaf
 
 Để tối ưu được hàm này, ta không thể dùng đạo hàm mà phải thử trên từng node leaf để xem model nào cho kết quả tốt nhất.
