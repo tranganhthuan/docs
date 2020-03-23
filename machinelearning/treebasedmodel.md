@@ -163,7 +163,15 @@ Tiếp tục, làm vậy với các node sau khi được chia cho đến khi le
 Trong thực tế, nếu ta để cho decision tree tự phân chia sẽ dẫn đến overfitting, để tránh việc này ta cần phải pruning decision tree (tỉa cành lá - loại bỏ các leaf node không cần thiết).
 
 Có 2 cách đơn giản để pruning decision tree:
-- Reduced error pruning: Ta chia dataset ra làm 2 tập - trainning set, validation set. Ta fit Decision Tree vào tập training rồi tính score trên tập valition. Nếu thấy bị overfitting, ta bỏ bớt các leaf node, từ dưới lên. Ta cứ tỉa bớt rồi thử lại cho đến khi điểm của validation không còn cải thiện được nữa.
-- Cost complexity pruning: Ở cách làm này ta có cost function như sau:
+**Reduced error pruning:**
+
+Ta chia dataset ra làm 2 tập - trainning set, validation set. Ta fit Decision Tree vào tập training rồi tính score trên tập valition. Nếu thấy bị overfitting, ta bỏ bớt các leaf node, từ dưới lên. Ta cứ tỉa bớt rồi thử lại cho đến khi điểm của validation không còn cải thiện được nữa.
+**Cost complexity pruning:**
+
+Ở cách làm này ta có cost function như sau:
 
 $$L = \sum_{i=1}^n w_i l_i + \lambda \text{#leaf}$$
+Với: 
+$$w_i = n_i/N$$: là tỉ lệ giữa số lượng phần tử có trong node với tổng số phần tử
+$$l_i$$: là loss của node i
+$$#leaf$$: là số lượng node leaf
