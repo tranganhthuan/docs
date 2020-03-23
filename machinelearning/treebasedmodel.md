@@ -187,6 +187,7 @@ $$\text{num_leaf}$$: là số lượng node leaf
 
 > Tổng kết lại có 2 cách đơn giản để pruning:
 > - **Reduced error pruning:** đối chiếu score của model của 2 tập training set và validation set với nhau khi loại bỏ các node. 
+>
 > - **Cost complexity pruning:** dùng lost function $$L = \sum_{i=1}^n w_i l_i + \lambda*\text{num_leaf}$$ để đánh giá model khi loại bỏ các node.
 
 ## Random Forest
@@ -220,7 +221,7 @@ Ta lấy dòng 2,3,5,5,6,6 ra để tạo 1 boostrapped dataset có size bằng 
 | 3 | 2 |
 | 3 | 2 |
 
-Với $$k$$ boostrapped dataset ta sẽ có $$t$$ Decision Tree khác nhau. Tuy nhiên, những Decision Tree này chỉ chọn random $$k$$ features có trong boostrapped dataset.
+Với $$k$$ boostrapped dataset ta sẽ có $$t$$ Decision Tree khác nhau. Tuy nhiên, những Decision Tree này chỉ chọn random $$k$$ features có trong boostrapped dataset ở mỗi bước.
 
 Ví dụ, ta có một boostrapped dataset như sau:
 
@@ -230,5 +231,9 @@ Ví dụ, ta có một boostrapped dataset như sau:
 | Có | Không | Có | Bình thường |
 | Có | Có | Có | Bệnh X |
 
-Thì với $$k$$ bằng 2 thì Decision Tree của data set này chỉ chọn ngẫu nhiên 2 trong 3 features trên (đau tim - ho hoặc ho - nhức đầu hoặc đau tim - nhức đầu).
+Thì với $$k$$ bằng 2 thì Decision Tree của data set này chỉ chọn ngẫu nhiên 2 trong 3 features trên (đau tim - ho hoặc ho - nhức đầu hoặc đau tim - nhức đầu) ở mỗi bước. $$k$$ thường được chọn bằng $$\sqrt(n)$$ với $$n$$ là tổng số features.
+
+Mỗi kết quả dự đoán (classification) sẽ được vote bởi các Decision Tree, kết quả cuối cùng sẽ là kết quả có nhiều lược vote nhất.
+
+Ngoài ra, ở quá trình boostrap sampling, ta thấy boostrapped dataset có độ lớn bằng original dataset nhưng có những giá trị trùng, điều này có nghĩa là có một số dữ liệu tồn tại trong original dataset nhưng không có trong boostrapped dataset. Những điểm dữ liệu này được gọi là **Out-of-Bag** datasets. Với mỗi điểm dữ liệu, ta dùng những Decision Tree không chứa nó khi training để dự đoán. Tỉ lệ dự đoán đúng với tổng số lần dự đoán cũng chính là độ chính xác (accuracy) của model. Còn độ sai lệch (1 - độ chính xác) được gọi là **Out-of-Bag Error**. 
 
