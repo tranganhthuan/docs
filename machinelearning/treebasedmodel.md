@@ -191,5 +191,4 @@ $$\text{num_leaf}$$: là số lượng node leaf
 
 ## Random Forest
 
-Như đã biết, decision tree gặp phải vấn đề overfiting - mặc dù fit rất tốt với dữ liệu được học nhưng khó khăn khi dự đoán dữ liệu mới. Random Forest giải quyết tốt vẫn đề này và nó vẫn giữ lại được tính dễ hiểu của Decision Tree.
-
+Như đã biết, decision tree gặp phải vấn đề overfiting - mặc dù fit rất tốt với dữ liệu được học nhưng khó khăn khi dự đoán dữ liệu mới. Random Forest giải quyết tốt vẫn đề này và nó vẫn giữ lại được tính dễ hiểu của Decision Tree. Như tên gọi, Random Forest là gồm nhiều model Decision Tree. Để tạo ra nhiều dữ liệu cho các model này ta dùng một kỹ thuật gọi là **Boosttrap**. Ví dụ ta muốn 
