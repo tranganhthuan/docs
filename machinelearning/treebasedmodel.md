@@ -129,6 +129,7 @@ Ta cùng áp dụng vào tập dữ liệu sau đây:
 Với cột chương là số chương học sinh đã học, dựa vào số liệu này ta sẽ đoán điểm số của học sinh đó.
 
 Vẽ sơ đồ các điểm trên:
+
 ![](/assets/images/plot 1.png)
 
 Tiếp theo ta cũng chia node thành 2 node nhỏ hơn như Decision Tree - Classification. (Giống như trên ta sắp xếp các giá trị theo thứ tự rồi lấy giá trị trung bình của 2 dòng liên tiếp có giá trị khác nhau.)
