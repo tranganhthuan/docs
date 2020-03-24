@@ -233,7 +233,12 @@ Ví dụ, ta có một boostrapped dataset như sau:
 
 Thì với $$k$$ bằng 2 thì Decision Tree của data set này chỉ chọn ngẫu nhiên 2 trong 3 features trên (đau tim - ho hoặc ho - nhức đầu hoặc đau tim - nhức đầu) ở mỗi bước. $$k$$ thường được chọn bằng $$\sqrt(n)$$ với $$n$$ là tổng số features.
 
-Mỗi kết quả dự đoán (classification) sẽ được vote bởi các Decision Tree, kết quả cuối cùng sẽ là kết quả có nhiều lược vote nhất.
+Mỗi kết quả dự đoán (Classification) sẽ được vote bởi các Decision Tree, kết quả cuối cùng sẽ là kết quả có nhiều lược vote nhất. Còn đối với Regression, kết quả cuối cùng sẽ bằng trung bình cộng kết quả của các Decision Tree.
 
 Ngoài ra, ở quá trình boostrap sampling, ta thấy boostrapped dataset có độ lớn bằng original dataset nhưng có những giá trị trùng, điều này có nghĩa là có một số dữ liệu tồn tại trong original dataset nhưng không có trong boostrapped dataset. Những điểm dữ liệu này được gọi là **Out-of-Bag** datasets. Với mỗi điểm dữ liệu, ta dùng những Decision Tree không chứa nó khi training để dự đoán. Tỉ lệ dự đoán đúng với tổng số lần dự đoán cũng chính là độ chính xác (accuracy) của model. Còn độ sai lệch (1 - độ chính xác) được gọi là **Out-of-Bag Error**. 
 
+## Ada Boost
+
+Như ta đã thấy ở Random Forest mỗi Decision Tree đều có đóng góp bằng nhau, điều này đôi khi không hiệu quả vì các tree có độ chính xác khác nhau. Ada Boost đã cải tiến điều này bằng cách tin tưởng vào những tree có độ chính xác cao (những tree có độ chính xác cao thì kết quả sẽ được xem trọng hơn), và đối với những tree hay dự đoán sai thì Ada Boost sẽ lấy kết quả ngược lại với kết quả của những tree này. 
+
+Đầu tiên, chúng ta cùng tìm hiểu thuật ngữ **Week Learner**. Khác với Random Forest, mỗi tree trong Ada Boost chỉ gồm có 1 node và 2 leaf,được gọi là **stump(gốc cây)**. Bởi vì mỗi stump chỉ có thể đưa ra quyết định dựa vào 1 feature nên nó được xem là **Weak Learner**.
