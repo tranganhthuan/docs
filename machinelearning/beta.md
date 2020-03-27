@@ -17,6 +17,27 @@ parent: Machine Learning
 
 ## Decision Tree - Khái niệm:
 
+Phân theo chức năng:
+
+- Root Node: Là node gốc, gồm toàn bộ data chưa được chia.
+
+- Decision Node: Là node chứa câu hỏi, được chia ra từ Root Node và tiếp tục được phân chia.
+
+- Leaf Node: Là node chứa đầu ra.
+
+Phân theo quan hệ:
+
+- Parent Node: Là node được chia thành nhiều Child Node. Có thể là Root Node, hoặc Decision Node.
+
+- Child Node: Là node nhận data từ Parent Node và có thể tiếp tục được chia. Có thể là Decision Node, hoặc Leaf Node.
+
+- Sibling Node: Là các node có cùng Parent Node.
+
+Động từ
+
+- Splitting (Phân nhánh): Phân chia Node thành các Child Node.
+
+- Prunning (Tỉa cây): Bỏ bớt các node. Là quá trình ngược lại với Splitting. 
 
 ## Decision Tree - Classification:
 
@@ -110,3 +131,5 @@ Có 3 trường hợp không còn chia được nữa:
 - Parent node chỉ có 1 loại label.
 
 - Parent node chỉ gồm các phần tử có features giống nhau hoàn toàn nhưng khác label.
+
+## Decision Tree - Regression:
