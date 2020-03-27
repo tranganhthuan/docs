@@ -21,9 +21,12 @@ parent: Machine Learning
 ## Decision Tree - Classification:
 
 Bước 1: Split Root node thành 2 node,  cách chia dựa vào values của cột Features: 
-	- Trường hợp Features là **boolean**: Chia theo True/False có 1 cách chia.
-	- Trường hợp Features là **category**: Chia theo Category(One/Rest) có c cách chia ứng với số categories.
-	- Trường hợp Features là **number**: Sắp xếp thứ tự của các giá trị. Lấy trung bình của 2 giá trị liên tiếp khác nhau. Chia tập data theo các giá trị này có n các chia ứng với số giá trị trung bình.
+
+- Trường hợp Features là **boolean**: Chia theo True/False có 1 cách chia.
+
+- Trường hợp Features là **category**: Chia theo Category(One/Rest) có c cách chia ứng với số categories.
+
+- Trường hợp Features là **number**: Sắp xếp thứ tự của các giá trị. Lấy trung bình của 2 giá trị liên tiếp khác nhau. Chia tập data theo các giá trị này có n các chia ứng với số giá trị trung bình.
 	
 Bước 2: Tính Impurity/Information Gain ở từng cách chia - Impurity thể hiện độ vẫn đục của tập data sau khi chia (xấu), trong khi Information Gain thể hiện lượng thông tin thu được của tập data sau khi chia (tốt).
 
