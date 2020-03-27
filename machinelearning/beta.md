@@ -74,23 +74,29 @@ Bước 2.1. Tính Gini Index/ Entropy ở từng node child.
 	
 		$$p_i = p(y = k_i) = \frac{k_i}{n}$$
 
-			- $$k_i$$: là số phần tử có label là $$k_i$$
+		- $$k_i$$: là số phần tử có label là $$k_i$$
 
-			- $$n$$: tổng số phần tử node hiện tại
+		- $$n$$: tổng số phần tử node hiện tại
 
 Bước 2.2: Tính Impurity/Infomation Gain của cách chia.
-	- Công thức tính Impurity:
 
-	$$Impurity = \sum_{i = 1}^n w_i f(n_i)$$
+- Công thức tính Impurity:
+
+$$Impurity = \sum_{i = 1}^n w_i f(n_i)$$
+
+- Với:
+	- $$w_i = \frac{n_child}{n_parent}$$: là tỉ lệ giữa số phần tử có trong node child và số phần tử có trong node parent.
 	
-	- Với:
-		- $$w_i = \frac{n_child}{n_parent}$$: là tỉ lệ giữa số phần tử có trong node child và số phần tử có trong node parent.
-		- $$f(n_i)$$: là Gini Index/Entropy của node children.
-	- Công thức tính Infomation Gain:
+	- $$f(n_i)$$: là Gini Index/Entropy của node children.
 	
-	$$Gain = E(parent) - E(children)$$
+- Công thức tính Infomation Gain:
+
+$$Gain = E(parent) - E(children)$$
+
+- Với:
+
+	- E(parent): là Entropy của node parent đã được tính ở lần split trước. Entropy của Root Node bằng 1.
 	
-	- Lưu ý:
-		E(children): là Impurity của 2 node child được tính bằng Entropy.
+	- E(children): là Impurity của 2 node child được tính bằng Entropy.
 	
 Bước 3: Chọn cách chia có Impurity nhỏ nhất hoặc Information Gain cao nhất.
