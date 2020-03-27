@@ -85,7 +85,7 @@ Bước 2.2: Tính Impurity/Infomation Gain của cách chia.
 $$Impurity = \sum_{i = 1}^n w_i f(n_i)$$
 
 - Với:
-	- $$w_i = \frac{n_child}{n_parent}$$: là tỉ lệ giữa số phần tử có trong node child và số phần tử có trong node parent.
+	- $$w_i = \frac{n_{child}}{n_{parent}}$$: là tỉ lệ giữa số phần tử có trong node child và số phần tử có trong node parent.
 	
 	- $$f(n_i)$$: là Gini Index/Entropy của node children.
 	
