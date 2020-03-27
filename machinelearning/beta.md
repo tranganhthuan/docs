@@ -56,13 +56,14 @@ Bước 2.1. Tính Gini Index/ Entropy ở từng node child.
 - Với: 
 
 	- Trường hợp Label là **true/false**: 
+	
 		$$p = p(y = true) = \frac{t}{n}$$
 
 		- $$t$$: là số phần tử có label là true
 
 		- $$n$$: tổng số phần tử node hiện tại
 		
-		$$p = p(y = false) = \frac{f}{n}$$
+		$$q = p(y = false) = \frac{f}{n}$$
 
 		- $$t$$: là số phần tử có label là false
 
@@ -95,8 +96,17 @@ $$Gain = E(parent) - E(children)$$
 
 - Với:
 
-	- E(parent): là Entropy của node parent đã được tính ở lần split trước. Entropy của Root Node bằng 1.
+	- $$E(parent)$$: là Entropy của node parent đã được tính ở lần split trước. Entropy của Root Node bằng 1.
 	
-	- E(children): là Impurity của 2 node child được tính bằng Entropy.
+	- $$E(children)$$: là Impurity của 2 node child được tính bằng Entropy.
 	
 Bước 3: Chọn cách chia có Impurity nhỏ nhất hoặc Information Gain cao nhất.
+
+Bước 4: Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem mỗi child node là một parent node cho đến khi không còn chia được nửa.
+Có 3 trường hợp không còn chia được nữa:
+
+- Parent node chỉ có 1 phần tử.
+
+- Parent node chỉ có 1 loại label.
+
+- Parent node chỉ gồm các phần tử có features giống nhau hoàn toàn nhưng khác label.
