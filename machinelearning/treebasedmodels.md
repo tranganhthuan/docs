@@ -18,6 +18,7 @@ parent: Machine Learning
 ## Decision Tree - Khái niệm:
 
 ### Phân theo chức năng:
+{: .no_toc }
 
 - Root Node: Là node gốc, gồm toàn bộ data chưa được chia.
 
@@ -25,7 +26,8 @@ parent: Machine Learning
 
 - Leaf Node: Là node chứa đầu ra.
 
-Phân theo quan hệ:
+### Phân theo quan hệ:
+{: .no_toc }
 
 - Parent Node: Là node được chia thành nhiều Child Node. Có thể là Root Node, hoặc Decision Node.
 
@@ -33,7 +35,8 @@ Phân theo quan hệ:
 
 - Sibling Node: Là các node có cùng Parent Node.
 
-Thuộc tính:
+### Thuộc tính:
+{: .no_toc }
 
 - Max depth: Độ cao tối đa của tree tính từ Root Node (Root Node có độ cao bằng 0).
 
@@ -43,7 +46,8 @@ Thuộc tính:
 
 - Min sample leaf: Số sample có trong Leaf Node. Nếu Decision Node phân chia Leaf Node có chứa ít sample hơn số này thì sẽ không phân chia.
 
-Động từ
+### Động từ
+{: .no_toc }
 
 - Splitting (Phân nhánh): Phân chia Node thành các Child Node.
 
@@ -51,7 +55,10 @@ Thuộc tính:
 
 ## Decision Tree - Classification:
 
-Bước 1: Split Parent Node thành 2 node - ở lần đầu tiên Parent Node là Root Node,  cách chia dựa vào values của cột Features: 
+### Bước 1: 
+{: .no_toc }
+
+Split Parent Node thành 2 node - ở lần đầu tiên Parent Node là Root Node,  cách chia dựa vào values của cột Features: 
 
 - Trường hợp Features là **boolean**: Chia theo True/False có 1 cách chia.
 
@@ -59,11 +66,15 @@ Bước 1: Split Parent Node thành 2 node - ở lần đầu tiên Parent Node 
 
 - Trường hợp Features là **number**: Sắp xếp thứ tự của các giá trị. Lấy trung bình của 2 giá trị liên tiếp khác nhau. Chia tập data theo các giá trị này có n các chia ứng với số giá trị trung bình.
 	
-Bước 2: Tính Impurity/Information Gain ở từng cách chia - Impurity thể hiện độ vẫn đục của tập data sau khi chia (xấu), trong khi Information Gain thể hiện lượng thông tin thu được của tập data sau khi chia (tốt).
+### Bước 2: 
+{: .no_toc }
+
+Tính Impurity/Information Gain ở từng cách chia - Impurity thể hiện độ vẫn đục của tập data sau khi chia (xấu), trong khi Information Gain thể hiện lượng thông tin thu được của tập data sau khi chia (tốt).
 
 Với mỗi cách chia ta làm 2 bước như sau:
 
-a. Tính Gini Index/ Entropy ở từng node child.
+Tính Gini Index/ Entropy ở từng node child.
+
 - Công thức Gini Index:
 
 	- Trường hợp Label là **true/false**: 
@@ -110,7 +121,7 @@ a. Tính Gini Index/ Entropy ở từng node child.
 
 		- $$n$$: tổng số phần tử node hiện tại
 
-b. Tính Impurity/Infomation Gain của cách chia.
+Tính Impurity/Infomation Gain của cách chia.
 
 - Công thức tính Impurity:
 
@@ -131,9 +142,15 @@ $$Gain = E(parent) - E(children)$$
 	
 	- $$E(children)$$: là Impurity của 2 node child được tính bằng Entropy.
 	
-Bước 3: Chọn cách chia có Impurity nhỏ nhất hoặc Information Gain cao nhất.
+### Bước 3: 
+{: .no_toc }
 
-Bước 4: Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem mỗi child node là một parent node cho đến khi không còn chia được nửa.
+Chọn cách chia có Impurity nhỏ nhất hoặc Information Gain cao nhất.
+
+### Bước 4: 
+{: .no_toc }
+
+Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem mỗi child node là một parent node cho đến khi không còn chia được nửa.
 
 Có 3 trường hợp không còn chia được nữa:
 
@@ -143,13 +160,22 @@ Có 3 trường hợp không còn chia được nữa:
 
 - Parent Node chỉ gồm các phần tử có features giống nhau hoàn toàn nhưng khác label.
 
-Bước 5: Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label cuả Sample sẽ là Label của Leaf Node (Label của Leaf Node được xác định bằng Label có số lượng cao nhất trong Leaf Node).
+### Bước 5: 
+{: .no_toc }
+
+Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label cuả Sample sẽ là Label của Leaf Node (Label của Leaf Node được xác định bằng Label có số lượng cao nhất trong Leaf Node).
 
 ## Decision Tree - Regression:
 
-Bước 1: Split Parent Node thành 2 node (Giống như Decision Tree - Classification).
+### Bước 1: 
+{: .no_toc }
 
-Bước 2: Tính Squared Error của mỗi cách chia bằng cách:
+Split Parent Node thành 2 node (Giống như Decision Tree - Classification).
+
+### Bước 2: 
+{: .no_toc }
+
+Tính Squared Error của mỗi cách chia bằng 3 bước:
 
 - Tính giá trị trung bình của từng node:
 
@@ -163,15 +189,27 @@ $$e(n) = \sum_{i=1}^n (mean - y_i)^2$$
 
 $$e = e(n_1) + e(n_2)$$
 
-Bước 3: Chọn cách chia có Squared Error thấp nhất.
+### Bước 3: 
+{: .no_toc }
 
-Bước 4: Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem mỗi child node là một parent node cho đến khi không còn chia được nửa.
+Chọn cách chia có Squared Error thấp nhất.
 
-Bước 5: Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label của Sample sẽ là giá trị trung bình của các Label trong Leaf Node đó.
+### Bước 4: 
+{: .no_toc }
+
+Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem mỗi child node là một parent node cho đến khi không còn chia được nửa.
+
+### Bước 5: 
+{: .no_toc }
+
+Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label của Sample sẽ là giá trị trung bình của các Label trong Leaf Node đó.
 
 ## Random Forest:
 
-Bước 1: Tạo Boostrapped Sample từ Original Sample và có cùng size $$n$$.
+### Bước 1: 
+{: .no_toc }
+
+Tạo Boostrapped Sample từ Original Sample và có cùng size $$n$$.
 
 Cách tạo Boostrapped Sample với size $$k$$:
 
@@ -183,15 +221,24 @@ Cách tạo Boostrapped Sample với size $$k$$:
 
 - Lặp lại $$k$$ lần, ta thu được Boostrapped Sample có size $$k$$.
 
-Bước 2: Tạo Decision Tree ứng với mỗi Boostrapped Sample. Với mỗi lần split, chỉ chọn một số Features để xem xét.
+### Bước 2: 
+{: .no_toc }
 
-Bước 3: Khi đã có Random Forest, mỗi Sample đưa vào sẽ được dự đoán bởi tất cả Decision Tree - các Decision Tree sẽ vote cho các Label. Label của Sample sẽ là Label được vote nhiều nhất.  
+Tạo Decision Tree ứng với mỗi Boostrapped Sample. Với mỗi lần split, chỉ chọn một số Features để xem xét.
+
+### Bước 3: 
+{: .no_toc }
+
+Khi đã có Random Forest, mỗi Sample đưa vào sẽ được dự đoán bởi tất cả Decision Tree - các Decision Tree sẽ vote cho các Label. Label của Sample sẽ là Label được vote nhiều nhất.  
 
 *Bổ sung:* Độ chính xác của Random Forest có thể được tính bằng **Out of Bag Score**.
 
 ## Ada Boost:
 
-Bước 1: Tạo Sample Weight ứng với mỗi Sample - Sample Weight sẽ được dùng đến ở lần chia thứ 2.
+### Bước 1: 
+{: .no_toc }
+
+Tạo Sample Weight ứng với mỗi Sample - Sample Weight sẽ được dùng đến ở lần chia thứ 2.
 
 Sample Weight ban đầu bằng nhau và bằng:
 
@@ -201,7 +248,10 @@ Với:
 - $$w$$: là weight của mỗi phần tử.
 - $$n$$ là tổng số phần tử.
 
-Bước 2: Chọn cách chia tốt nhất (giống như Decision Tree). Tạo được một Decision Tree với cách chia này. 
+### Bước 2: 
+{: .no_toc }
+
+Chọn cách chia tốt nhất (giống như Decision Tree). Tạo được một Decision Tree với cách chia này. 
 
 Decision Tree chỉ với  một Decision Node được gọi là một **Stump** - **Weak Learner**.
 
