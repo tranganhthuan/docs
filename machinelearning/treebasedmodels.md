@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tree based models(Beta)
+title: Tree based models
 nav_order: 4
 parent: Machine Learning
 ---
