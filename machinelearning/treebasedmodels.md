@@ -304,7 +304,7 @@ Tạo Sample mới từ Original Sample và cũng có size bằng n dựa vào S
 
 Cách tạo:
 
-- Chọn số $$t$$ ngẫu nhiên thuộc khoảng $$[0,1]$$.
+- Chọn số $$t$$ ngẫu nhiên thuộc khoảng $$[0,1)$$.
 
 - Chọn có hoàn lại phần tử thứ $$k$$ trong Original Sample thỏa:
 
