@@ -15,7 +15,9 @@ parent: Machine Learning
 1. TOC
 {:toc}
 
-## Decision Tree - Khái niệm:
+<hr/>
+
+## Decision Tree - Khái niệm.
 
 ### Phân theo chức năng:
 {: .no_toc }
@@ -55,7 +57,7 @@ parent: Machine Learning
 
 <hr/>
 
-## Decision Tree - Classification:
+## Decision Tree - Classification.
 
 ### Bước 1: 
 {: .no_toc }
@@ -167,7 +169,9 @@ Có 3 trường hợp không còn chia được nữa:
 
 Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label cuả Sample sẽ là Label của Leaf Node (Label của Leaf Node được xác định bằng Label có số lượng cao nhất trong Leaf Node).
 
-## Decision Tree - Regression:
+<hr/>
+
+## Decision Tree - Regression.
 
 ### Bước 1: 
 {: .no_toc }
@@ -206,7 +210,9 @@ Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem mỗi chil
 
 Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label của Sample sẽ là giá trị trung bình của các Label trong Leaf Node đó.
 
-## Random Forest:
+<hr/>
+
+## Random Forest.
 
 ### Bước 1: 
 {: .no_toc }
@@ -235,7 +241,9 @@ Khi đã có Random Forest, mỗi Sample đưa vào sẽ được dự đoán b�
 
 *Bổ sung:* Độ chính xác của Random Forest có thể được tính bằng **Out of Bag Score**.
 
-## Ada Boost:
+<hr/>
+
+## Ada Boost.
 
 ### Bước 1: 
 {: .no_toc }
@@ -285,4 +293,17 @@ $$\text{New Sample Weight} = \text{Sample Weight}*e^{\text{Amount of Say}}$$
 
 $$\text{New Sample Weight} = \text{Sample Weight}*e^{-\text{Amount of Say}}$$
 
+Sau đó normalize New Sample Weight - để tổng của chúng bằng 1:
+
+$$\text{Normalized Sample Weight} = \frac{New Sample Weight}{\sum_{i=1}^n New Sample Weight}$$
+
 ### Bước 5:
+{: .no_toc }
+
+Tạo Sample mới từ Original Sample và cũng có size bằng n dựa vào Sample Weight.
+
+Cách tạo:
+
+- Chọn số $$t$$ ngẫu nhiên thuộc khoảng $$[0,1]$$.
+- Chọn phần tử thứ $$k$$ trong Original Sample với $$\sum_{i=0}^{k-1} \text{Sample Weight} \les t < \sum_{i=0}^{k} \text{Sample Weight}$$
+
