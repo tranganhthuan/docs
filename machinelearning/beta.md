@@ -189,4 +189,11 @@ Bước 3: Khi đã có Random Forest, mỗi Sample đưa vào sẽ được d�
 
 *Bổ sung:* Độ chính xác của Random Forest có thể được tính bằng **Out of Bag Score**.
 
-## 
+## Ada Boost:
+
+Bước 1: Tạo Sample Weight ứng với mỗi Sample.
+
+- Sample Weight ban đầu bằng nhau, tính bằng công thức:
+
+$$w = \frac{1}{n}$$
+
