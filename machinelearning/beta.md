@@ -185,7 +185,8 @@ Cách tạo Boostrapped Sample với size $$k$$:
 
 Bước 2: Tạo Decision Tree ứng với mỗi Boostrapped Sample. Với mỗi lần split, chỉ chọn một số Features để xem xét.
 
-Bước 3: Khi đã có Random Forest,
+Bước 3: Khi đã có Random Forest, mỗi Sample đưa vào sẽ được dự đoán bởi tất cả Decision Tree - các Decision Tree sẽ vote cho các Label. Label của Sample sẽ là Label được vote nhiều nhất.  
 
-Bổ sung:
+Bổ sung: Độ chính xác của Random Forest có thể được tính bằng **Out of Bag Score**.
 
+## 
