@@ -171,4 +171,21 @@ Bước 5: Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần �
 
 ## Random Forest:
 
+Bước 1: Tạo Boostrapped Sample từ Original Sample và có cùng size $$n$$.
+
+Cách tạo Boostrapped Sample với size $$k$$:
+
+- Chọn ngẫu nhiên 1 phần tử trong Original Sample.
+
+- Ghi thông tin vào Boostrapped Sample.
+
+- Bỏ lại vào Original Sample. 
+
+- Lặp lại $$k$$ lần, ta thu được Boostrapped Sample có size $$k$$.
+
+Bước 2: Tạo Decision Tree ứng với mỗi Boostrapped Sample. Với mỗi lần split, chỉ chọn một số Features để xem xét.
+
+Bước 3: Khi đã có Random Forest,
+
+Bổ sung:
 
