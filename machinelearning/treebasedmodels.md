@@ -191,9 +191,36 @@ Bước 3: Khi đã có Random Forest, mỗi Sample đưa vào sẽ được d�
 
 ## Ada Boost:
 
-Bước 1: Tạo Sample Weight ứng với mỗi Sample.
+Bước 1: Tạo Sample Weight ứng với mỗi Sample - Sample Weight sẽ được dùng đến ở lần chia thứ 2.
 
-- Sample Weight ban đầu bằng nhau, tính bằng công thức:
+Sample Weight ban đầu bằng nhau và bằng:
 
 $$w = \frac{1}{n}$$
 
+Với: 
+- $$w$$: là weight của mỗi phần tử.
+- $$n$$ là tổng số phần tử.
+
+Bước 2: Chọn cách chia tốt nhất (giống như Decision Tree). Tạo được một Decision Tree với cách chia này. 
+
+Decision Tree chỉ với  một Decision Node được gọi là một **Stump** - **Weak Learner**.
+
+Bước 3: Tính **Amount of Say** của Decision Tree này. Amount of Say càng lớn thì khi predict sample mới, vote của tree sẽ càng có giá trị.
+
+Ta dùng Decision Tree vừa mới tạo dự đoán lại tập dữ liệu ở trên. Khi đó, Amount of Say được tính bằng công thức:
+
+$$\text{Amount of Say} = \frac{1}{2} \log(\frac{1 - \text{Total Error}}{\text{Total Error}})$$
+
+Với:
+
+- $$\text{Total Error}$$: là tổng Sample Weight của các dự đoán sai
+
+Bước 4: Cập nhật Sample Weight.
+
+Dữ liệu dự đoán đúng:
+
+$$\text{New Sample Weight} = \text{Sample Weight} e^{\text{Amount of Say}}$$
+
+Dữ liệu dự đoán sai:
+
+$$\text{New Sample Weight} = \text{Sample Weight} e^{-\text{Amount of Say}}$$
