@@ -17,7 +17,7 @@ parent: Machine Learning
 
 ## Decision Tree - Khái niệm:
 
-Phân theo chức năng:
+### Phân theo chức năng:
 
 - Root Node: Là node gốc, gồm toàn bộ data chưa được chia.
 
