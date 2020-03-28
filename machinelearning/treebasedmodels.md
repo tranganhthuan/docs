@@ -305,5 +305,8 @@ Tạo Sample mới từ Original Sample và cũng có size bằng n dựa vào S
 Cách tạo:
 
 - Chọn số $$t$$ ngẫu nhiên thuộc khoảng $$[0,1]$$.
-- Chọn phần tử thứ $$k$$ trong Original Sample với $$\sum_{i=0}^{k-1} \text{Sample Weight} \les t < \sum_{i=0}^{k} \text{Sample Weight}$$
+- Chọn có hoàn lại phần tử thứ $$k$$ trong Original Sample thỏa:
 
+$$\sum_{i=0}^{k-1} \text{Sample Weight} \les t < \sum_{i=0}^{k} \text{Sample Weight}$$
+
+- Lặp lại n lần
