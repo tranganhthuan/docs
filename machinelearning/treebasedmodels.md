@@ -307,6 +307,6 @@ Cách tạo:
 - Chọn số $$t$$ ngẫu nhiên thuộc khoảng $$[0,1]$$.
 - Chọn có hoàn lại phần tử thứ $$k$$ trong Original Sample thỏa:
 
-$$\sum_{i=0}^{k-1} \text{Sample Weight} \les t < \sum_{i=0}^{k} \text{Sample Weight}$$
+$$\sum_{i=0}^{k-1} \text{Sample Weight} \le t < \sum_{i=0}^{k} \text{Sample Weight}$$
 
 - Lặp lại n lần
