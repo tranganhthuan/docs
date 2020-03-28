@@ -53,6 +53,8 @@ parent: Machine Learning
 
 - Prunning (Tỉa cây): Bỏ bớt các node. Là quá trình ngược lại với Splitting. 
 
+<hr/>
+
 ## Decision Tree - Classification:
 
 ### Bước 1: 
@@ -255,7 +257,10 @@ Chọn cách chia tốt nhất (giống như Decision Tree). Tạo được mộ
 
 Decision Tree chỉ với  một Decision Node được gọi là một **Stump** - **Weak Learner**.
 
-Bước 3: Tính **Amount of Say** của Decision Tree này. Amount of Say càng lớn thì khi predict sample mới, vote của tree sẽ càng có giá trị.
+### Bước 3: 
+{: .no_toc }
+
+Tính **Amount of Say** của Decision Tree này. Amount of Say càng lớn thì khi predict sample mới, vote của tree sẽ càng có giá trị.
 
 Ta dùng Decision Tree vừa mới tạo dự đoán lại tập dữ liệu ở trên. Khi đó, Amount of Say được tính bằng công thức:
 
@@ -265,12 +270,19 @@ Với:
 
 - $$\text{Total Error}$$: là tổng Sample Weight của các dự đoán sai
 
-Bước 4: Cập nhật Sample Weight.
+### Bước 4: 
+{: .no_toc }
 
-Dữ liệu dự đoán đúng:
+Cập nhật Sample Weight.
 
-$$\text{New Sample Weight} = \text{Sample Weight} e^{\text{Amount of Say}}$$
+Có 2 trường hợp:
 
-Dữ liệu dự đoán sai:
+- Dữ liệu dự đoán đúng:
 
-$$\text{New Sample Weight} = \text{Sample Weight} e^{-\text{Amount of Say}}$$
+$$\text{New Sample Weight} = \text{Sample Weight}*e^{\text{Amount of Say}}$$
+
+- Dữ liệu dự đoán sai:
+
+$$\text{New Sample Weight} = \text{Sample Weight}*e^{-\text{Amount of Say}}$$
+
+### Bước 5:
