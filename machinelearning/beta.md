@@ -169,6 +169,6 @@ Bước 4: Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem
 
 Bước 5: Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label của Sample sẽ là giá trị trung bình của các Label trong Leaf Node đó.
 
-
+## Random Forest:
 
 
