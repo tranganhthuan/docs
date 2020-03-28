@@ -3,6 +3,7 @@ layout: default
 title: Tree based model
 nav_order: 3
 parent: Machine Learning
+pulished: False
 ---
 
 # Treebased model
