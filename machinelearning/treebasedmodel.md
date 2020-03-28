@@ -212,6 +212,7 @@ Ví dụ, ở phần trước ta có bảng sau:
 Ta lấy dòng 2,3,5,5,6,6 ra để tạo 1 boostrapped dataset có size bằng với dataset ban đầu. Thì dataset này sẽ có dạng.
 
 **Boostrapped Dataset**
+
 | Chương | Điểm |
 |:------:|:----:|
 | 8 | 10 |
