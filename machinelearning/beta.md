@@ -33,6 +33,16 @@ Phân theo quan hệ:
 
 - Sibling Node: Là các node có cùng Parent Node.
 
+Thuộc tính:
+
+- Max depth: Độ cao tối đa của tree tính từ Root Node (Root Node có độ cao bằng 0).
+
+- Max features: Số features tối đa quan tâm khi splitting.
+
+- Min sample split: Số sample còn có thể split. Nếu ít hơn số này thì không split nữa.
+
+- Min sample leaf: Số sample có trong Leaf Node. Nếu Decision Node phân chia Leaf Node có chứa ít sample hơn số này thì sẽ không phân chia.
+
 Động từ
 
 - Splitting (Phân nhánh): Phân chia Node thành các Child Node.
@@ -41,7 +51,7 @@ Phân theo quan hệ:
 
 ## Decision Tree - Classification:
 
-Bước 1: Split Root node thành 2 node,  cách chia dựa vào values của cột Features: 
+Bước 1: Split Parent Node thành 2 node - ở lần đầu tiên Parent Node là Root Node,  cách chia dựa vào values của cột Features: 
 
 - Trường hợp Features là **boolean**: Chia theo True/False có 1 cách chia.
 
@@ -53,7 +63,7 @@ Bước 2: Tính Impurity/Information Gain ở từng cách chia - Impurity th�
 
 Với mỗi cách chia ta làm 2 bước như sau:
 
-Bước 2.1. Tính Gini Index/ Entropy ở từng node child.
+a. Tính Gini Index/ Entropy ở từng node child.
 - Công thức Gini Index:
 
 	- Trường hợp Label là **true/false**: 
@@ -100,7 +110,7 @@ Bước 2.1. Tính Gini Index/ Entropy ở từng node child.
 
 		- $$n$$: tổng số phần tử node hiện tại
 
-Bước 2.2: Tính Impurity/Infomation Gain của cách chia.
+b. Tính Impurity/Infomation Gain của cách chia.
 
 - Công thức tính Impurity:
 
@@ -124,12 +134,41 @@ $$Gain = E(parent) - E(children)$$
 Bước 3: Chọn cách chia có Impurity nhỏ nhất hoặc Information Gain cao nhất.
 
 Bước 4: Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem mỗi child node là một parent node cho đến khi không còn chia được nửa.
+
 Có 3 trường hợp không còn chia được nữa:
 
-- Parent node chỉ có 1 phần tử.
+- Parent Node chỉ có 1 phần tử.
 
-- Parent node chỉ có 1 loại label.
+- Parent Node chỉ có 1 loại label.
 
-- Parent node chỉ gồm các phần tử có features giống nhau hoàn toàn nhưng khác label.
+- Parent Node chỉ gồm các phần tử có features giống nhau hoàn toàn nhưng khác label.
+
+Bước 5: Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label cuả Sample sẽ là Label của Leaf Node (Label của Leaf Node được xác định bằng Label có số lượng cao nhất trong Leaf Node).
 
 ## Decision Tree - Regression:
+
+Bước 1: Split Parent Node thành 2 node (Giống như Decision Tree - Classification).
+
+Bước 2: Tính Squared Error của mỗi cách chia bằng cách:
+
+- Tính giá trị trung bình của từng node:
+
+$$mean(n) = \frac{1}{n} \sum_{i=1}^n y_i$$
+
+- Tính Squared Error của từng node theo công thức:
+
+$$e(n) = \sum_{i=1}^n (mean - y_i)^2$$
+
+- Cộng Squared Error của 2 node:
+
+$$e = e(n_1) + e(n_2)$$
+
+Bước 3: Chọn cách chia có Squared Error thấp nhất.
+
+Bước 4: Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem mỗi child node là một parent node cho đến khi không còn chia được nửa.
+
+Bước 5: Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label của Sample sẽ là giá trị trung bình của các Label trong Leaf Node đó.
+
+
+
+
