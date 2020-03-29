@@ -237,6 +237,11 @@ Tạo Decision Tree ứng với mỗi Boostrapped Sample. Với mỗi lần spli
 ### Bước 3: 
 {: .no_toc }
 
+Lặp lại bước 1,2 cho đến khi đủ số tree mong muốn.
+
+### Bước 4: 
+{: .no_toc }
+
 Khi đã có Random Forest, mỗi Sample đưa vào sẽ được dự đoán bởi tất cả Decision Tree - các Decision Tree sẽ vote cho các Label. Label của Sample sẽ là Label được vote nhiều nhất.  
 
 *Bổ sung:* Độ chính xác của Random Forest có thể được tính bằng **Out of Bag Score**.
@@ -311,3 +316,17 @@ Cách tạo:
 $$\sum_{i=0}^{k-1} \text{Sample Weight} \le t < \sum_{i=0}^{k} \text{Sample Weight}$$
 
 - Lặp lại n lần
+
+### Bước 6:
+{: .no_toc }
+
+Lặp lại bước 1,2,3,4,5 với tập Sample mới thu được cho đến khi đủ số tree mong muốn.
+
+### Bước 7:
+{: .no_toc }
+
+Khi đã có model hoàn chỉnh, ta có 2 trường hợp:
+
+- Classification:
+
+	Label sẽ được dự đoán bởi các Decision Tree
