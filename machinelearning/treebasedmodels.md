@@ -105,32 +105,33 @@ Tính Gini Index/ Entropy ở từng node child.
 	
 		$$p = p(y = true) = \frac{t}{n}$$
 		
-		Với:
-			$$t$$: là số phần tử có label là true
+	Với:
 		
-			$$n$$: tổng số phần tử node hiện tại
+	$$t$$: là số phần tử có label là true
 		
-		$$q = p(y = false) = \frac{f}{n}$$
+	$$n$$: tổng số phần tử node hiện tại
 		
-		Với:
+	$$q = p(y = false) = \frac{f}{n}$$
+		
+	Với:
 
-			$$t$$: là số phần tử có label là false
+	$$t$$: là số phần tử có label là false
 
-			$$n$$: tổng số phần tử node hiện tại
+	$$n$$: tổng số phần tử node hiện tại
 		
-		Ta có:
+	Ta có:
 		
-		$$p + q = 1$$
+	$$p + q = 1$$
 
 	- Trường hợp Label là **category**:
 	
 		$$p_i = p(y = k_i) = \frac{k_i}{n}$$
 		
-		Với:
+	Với:
 
-			$$k_i$$: là số phần tử có label là $$k_i$$
+	$$k_i$$: là số phần tử có label là $$k_i$$
 
-			$$n$$: tổng số phần tử node hiện tại
+	$$n$$: tổng số phần tử node hiện tại
 
 Tính Impurity/Infomation Gain của cách chia.
 
@@ -138,20 +139,21 @@ Tính Impurity/Infomation Gain của cách chia.
 
 $$Impurity = \sum_{i = 1}^n w_i f(n_i)$$
 
-- Với:
-	$$w_i = \frac{n_{child}}{n_{parent}}$$: là tỉ lệ giữa số phần tử có trong node child và số phần tử có trong node parent.
-	
-	$$f(n_i)$$: là Gini Index/Entropy của node children.
+Với:
+
+$$w_i = \frac{n_{child}}{n_{parent}}$$: là tỉ lệ giữa số phần tử có trong node child và số phần tử có trong node parent.
+
+$$f(n_i)$$: là Gini Index/Entropy của node children.
 	
 - Công thức tính Infomation Gain:
 
 $$Gain = E(parent) - E(children)$$
 
-- Với:
+Với:
 
-	$$E(parent)$$: là Entropy của node parent đã được tính ở lần split trước. Entropy của Root Node bằng 1.
-	
-	$$E(children)$$: là Impurity của 2 node child được tính bằng Entropy.
+$$E(parent)$$: là Entropy của node parent đã được tính ở lần split trước. Entropy của Root Node bằng 1.
+
+$$E(children)$$: là Impurity của 2 node child được tính bằng Entropy.
 	
 ### Bước 3: 
 {: .no_toc }
@@ -268,9 +270,9 @@ $$w = \frac{1}{n}$$
 
 Với: 
 
-	$$w$$: là weight của mỗi phần tử.
+$$w$$: là weight của mỗi phần tử.
 	
-	$$n$$ là tổng số phần tử.
+$$n$$ là tổng số phần tử.
 
 ### Bước 2: 
 {: .no_toc }
@@ -290,7 +292,7 @@ $$\text{Amount of Say} = \frac{1}{2} \log(\frac{1 - \text{Total Error}}{\text{To
 
 Với:
 
-- $$\text{Total Error}$$: là tổng Sample Weight của các dự đoán sai
+$$\text{Total Error}$$: là tổng Sample Weight của các dự đoán sai
 
 ### Bước 4: 
 {: .no_toc }
@@ -355,15 +357,15 @@ Khi đã có model hoàn chỉnh, ta có 2 trường hợp:
 {: .no_toc }
 Tạo ra model ban đầu với hằng số - hàm này chỉ dự đoán một giá trị duy nhất cho dù đầu vào như thế nào. Hàm số có dạng:
 
-$$F_0(x) = \argmin_{\gamma} \sum_{i = 0}^n L(y_i, \gamma)$$
+$$F_0(x) = \argmin \sum_{i = 0}^n L(y_i, \gamma)$$
 
 Với:
 	
-	$$\argmin_{\gamma}$$: là tìm giá trị $$\gamma$$ sao cho hàm đạt giá trị nhỏ nhất
+$$\argmin_{\gamma}$$: là tìm giá trị $$\gamma$$ sao cho hàm đạt giá trị nhỏ nhất
 	
-	$$\sum_{i = 0}^n L(y_i, \gamma)$$: là Cost Function
+$$\sum_{i = 0}^n L(y_i, \gamma)$$: là Cost Function
 	
-	$$\gamma$$: là giá trị dự đoán
+$$\gamma$$: là giá trị dự đoán
 	
 Hàm này trả về giá trị $$\gamma$$ sao cho Cost Function đạt giá trị nhỏ nhất.
 
