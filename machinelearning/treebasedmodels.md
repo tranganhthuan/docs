@@ -327,6 +327,7 @@ Lặp lại bước 1,2,3,4,5 với tập Sample mới thu được cho đến k
 
 Khi đã có model hoàn chỉnh, ta có 2 trường hợp:
 
-- Classification:
-
-	Label sẽ được dự đoán bởi các Decision Tree
+- Classification: Label sẽ được dự đoán bởi các Decision Tree, với vote được tính bằng tổng Amount of Say của các Decision Tree đã vote cho Label. Label nào có giá trị vote lớn nhất sẽ được chọn.
+- Regression: Label sẽ được tính bằng công thức:
+	
+	$$h = \frac{\sum_{i=1}^{n} \text{Amount of Say}_i * h_i}{\sum_{i=1}^{n} \text{Amount of Say}_i}$$
