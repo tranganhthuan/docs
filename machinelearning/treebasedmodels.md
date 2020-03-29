@@ -272,7 +272,7 @@ Với:
 
 $$w$$: là weight của mỗi phần tử.
 	
-$$n$$ là tổng số phần tử.
+$$n$$: là tổng số phần tử.
 
 ### Bước 2: 
 {: .no_toc }
@@ -357,11 +357,11 @@ Khi đã có model hoàn chỉnh, ta có 2 trường hợp:
 {: .no_toc }
 Tạo ra model ban đầu với hằng số - hàm này chỉ dự đoán một giá trị duy nhất cho dù đầu vào như thế nào. Hàm số có dạng:
 
-$$F_0(x) = \argmin \sum_{i = 0}^n L(y_i, \gamma)$$
+$$F_0(x) = \underset{\gamma}{\operatorname{argmax}}  \sum_{i = 0}^n L(y_i, \gamma)$$
 
 Với:
 	
-$$\argmin_{\gamma}$$: là tìm giá trị $$\gamma$$ sao cho hàm đạt giá trị nhỏ nhất
+$$\underset{\gamma}{\operatorname{argmax}}$$: là tìm giá trị $$\gamma$$ sao cho hàm đạt giá trị nhỏ nhất
 	
 $$\sum_{i = 0}^n L(y_i, \gamma)$$: là Cost Function
 	
