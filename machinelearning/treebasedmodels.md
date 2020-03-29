@@ -99,31 +99,39 @@ Tính Gini Index/ Entropy ở từng node child.
 
 	$$E(p) = -\sum_{i=1}^n p_i \log(p_i)$$
 
-- Với: 
+- Xác suất $$p$$: 
 
 	- Trường hợp Label là **true/false**: 
 	
 		$$p = p(y = true) = \frac{t}{n}$$
+		
+		Với:
 
-		- $$t$$: là số phần tử có label là true
+		$$t$$: là số phần tử có label là true
 
-		- $$n$$: tổng số phần tử node hiện tại
+		$$n$$: tổng số phần tử node hiện tại
 		
 		$$q = p(y = false) = \frac{f}{n}$$
+		
+		Với:
 
-		- $$t$$: là số phần tử có label là false
+		$$t$$: là số phần tử có label là false
 
-		- $$n$$: tổng số phần tử node hiện tại
+		$$n$$: tổng số phần tử node hiện tại
+		
+		Ta có:
 		
 		$$p + q = 1$$
 
 	- Trường hợp Label là **category**:
 	
 		$$p_i = p(y = k_i) = \frac{k_i}{n}$$
+		
+		Với:
 
-		- $$k_i$$: là số phần tử có label là $$k_i$$
+		$$k_i$$: là số phần tử có label là $$k_i$$
 
-		- $$n$$: tổng số phần tử node hiện tại
+		$$n$$: tổng số phần tử node hiện tại
 
 Tính Impurity/Infomation Gain của cách chia.
 
@@ -132,9 +140,9 @@ Tính Impurity/Infomation Gain của cách chia.
 $$Impurity = \sum_{i = 1}^n w_i f(n_i)$$
 
 - Với:
-	- $$w_i = \frac{n_{child}}{n_{parent}}$$: là tỉ lệ giữa số phần tử có trong node child và số phần tử có trong node parent.
+	$$w_i = \frac{n_{child}}{n_{parent}}$$: là tỉ lệ giữa số phần tử có trong node child và số phần tử có trong node parent.
 	
-	- $$f(n_i)$$: là Gini Index/Entropy của node children.
+	$$f(n_i)$$: là Gini Index/Entropy của node children.
 	
 - Công thức tính Infomation Gain:
 
@@ -142,9 +150,9 @@ $$Gain = E(parent) - E(children)$$
 
 - Với:
 
-	- $$E(parent)$$: là Entropy của node parent đã được tính ở lần split trước. Entropy của Root Node bằng 1.
+	$$E(parent)$$: là Entropy của node parent đã được tính ở lần split trước. Entropy của Root Node bằng 1.
 	
-	- $$E(children)$$: là Impurity của 2 node child được tính bằng Entropy.
+	$$E(children)$$: là Impurity của 2 node child được tính bằng Entropy.
 	
 ### Bước 3: 
 {: .no_toc }
@@ -340,4 +348,7 @@ Khi đã có model hoàn chỉnh, ta có 2 trường hợp:
 	
 <hr/>
 
-## Gradient Boosting
+## Gradient Boosting - Tổng quát
+
+### Bước 1:
+{: .no_toc }
