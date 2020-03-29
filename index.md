@@ -8,4 +8,4 @@ permalink: /
 
 # docs.ml
 
-Website tập trung vào học machine learning từ cơ bản bao gồm cả những kiến thức toán cần thiết. Những thuật toán sẽ được diễn giải thông qua các ví dụ thực tế.
+Là website tổng hợp lý thuyết và công thức liên quan đến Machine Learning.
