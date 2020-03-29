@@ -335,6 +335,7 @@ Khi đã có model hoàn chỉnh, ta có 2 trường hợp:
 	Với:
 	
 	$$h_i$$: là giá trị dự đoán của tree thứ $$i$$
+	
 	$$\text{Amount of Say}_i$$: là giá trị dự đoán của tree thứ $$i$$
 	
 <hr/>
