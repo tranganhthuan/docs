@@ -355,6 +355,7 @@ Khi đã có model hoàn chỉnh, ta có 2 trường hợp:
 
 ### Bước 1:
 {: .no_toc }
+
 Tạo ra model ban đầu với hằng số - hàm này chỉ dự đoán một giá trị duy nhất cho dù đầu vào như thế nào. Hàm số có dạng:
 
 $$F_0(x) = \underset{\gamma}{\operatorname{argmax}}  \sum_{i = 0}^n L(y_i, \gamma)$$
@@ -371,3 +372,21 @@ Hàm này trả về giá trị $$\gamma$$ sao cho Cost Function đạt giá tr�
 
 ### Bước 2:
 {: .no_toc }
+(Coming soon)
+
+## Gradient Boosting - Regression
+
+### Bước 1:
+{: .no_toc }
+
+Dự đoán tất cả giá trị bằng giá trị trung bình của cột Label. 
+
+Giải thích:
+
+- Hàm Cost Function là hàm Mean Squared Error (MSE) - nhân $$\frac{1}{2}$$ để dễ đạo hàm, có dạng:
+
+$$\frac{1}{2} \frac{1}{n} \sum_{i = 1}^n (y - \gamma)^2$$
+
+- Lấy đạo hàm theo $$\gamma$$ ta được:
+
+$$$$
