@@ -106,7 +106,6 @@ Tính Gini Index/ Entropy ở từng node child.
 		$$p = p(y = true) = \frac{t}{n}$$
 		
 		Với:
-
 			$$t$$: là số phần tử có label là true
 		
 			$$n$$: tổng số phần tử node hiện tại
