@@ -107,17 +107,17 @@ Tính Gini Index/ Entropy ở từng node child.
 		
 		Với:
 
-		$$t$$: là số phần tử có label là true
-
-		$$n$$: tổng số phần tử node hiện tại
+			$$t$$: là số phần tử có label là true
+		
+			$$n$$: tổng số phần tử node hiện tại
 		
 		$$q = p(y = false) = \frac{f}{n}$$
 		
 		Với:
 
-		$$t$$: là số phần tử có label là false
+			$$t$$: là số phần tử có label là false
 
-		$$n$$: tổng số phần tử node hiện tại
+			$$n$$: tổng số phần tử node hiện tại
 		
 		Ta có:
 		
@@ -129,9 +129,9 @@ Tính Gini Index/ Entropy ở từng node child.
 		
 		Với:
 
-		$$k_i$$: là số phần tử có label là $$k_i$$
+			$$k_i$$: là số phần tử có label là $$k_i$$
 
-		$$n$$: tổng số phần tử node hiện tại
+			$$n$$: tổng số phần tử node hiện tại
 
 Tính Impurity/Infomation Gain của cách chia.
 
@@ -252,7 +252,7 @@ Lặp lại bước 1,2 cho đến khi đủ số tree mong muốn.
 
 Khi đã có Random Forest, mỗi Sample đưa vào sẽ được dự đoán bởi tất cả Decision Tree - các Decision Tree sẽ vote cho các Label. Label của Sample sẽ là Label được vote nhiều nhất.  
 
-*Bổ sung:* Độ chính xác của Random Forest có thể được tính bằng **Out of Bag Score**.
+Độ chính xác của Random Forest có thể được tính bằng **Out of Bag Score**.
 
 <hr/>
 
@@ -268,8 +268,10 @@ Sample Weight ban đầu bằng nhau và bằng:
 $$w = \frac{1}{n}$$
 
 Với: 
-- $$w$$: là weight của mỗi phần tử.
-- $$n$$ là tổng số phần tử.
+
+	$$w$$: là weight của mỗi phần tử.
+	
+	$$n$$ là tổng số phần tử.
 
 ### Bước 2: 
 {: .no_toc }
@@ -351,4 +353,20 @@ Khi đã có model hoàn chỉnh, ta có 2 trường hợp:
 ## Gradient Boosting - Tổng quát
 
 ### Bước 1:
+{: .no_toc }
+Tạo ra model ban đầu với hằng số - hàm này chỉ dự đoán một giá trị duy nhất cho dù đầu vào như thế nào. Hàm số có dạng:
+
+$$F_0(x) = \argmin_{\gamma} \sum_{i = 0}^n L(y_i, \gamma)$$
+
+Với:
+	
+	$$\argmin_{\gamma}$$: là tìm giá trị $$\gamma$$ sao cho hàm đạt giá trị nhỏ nhất
+	
+	$$\sum_{i = 0}^n L(y_i, \gamma)$$: là Cost Function
+	
+	$$\gamma$$: là giá trị dự đoán
+	
+Hàm này trả về giá trị $$\gamma$$ sao cho Cost Function đạt giá trị nhỏ nhất.
+
+### Bước 2:
 {: .no_toc }
