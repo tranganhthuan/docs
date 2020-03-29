@@ -331,3 +331,12 @@ Khi đã có model hoàn chỉnh, ta có 2 trường hợp:
 - Regression: Label sẽ được tính bằng công thức:
 	
 	$$h = \frac{\sum_{i=1}^{n} \text{Amount of Say}_i * h_i}{\sum_{i=1}^{n} \text{Amount of Say}_i}$$
+
+	Với:
+	
+	$$h_i$$: là giá trị dự đoán của tree thứ $$i$$
+	$$\text{Amount of Say}_i$$: là giá trị dự đoán của tree thứ $$i$$
+	
+<hr/>
+
+## Gradient Boosting
