@@ -521,18 +521,22 @@ Vậy $$\gamma$$ chính là giá trị trung bình của Leaf Node.
 ### Bước 5:
 {: .no_toc }
 
-Cập nhật $$F_0$$ thành $$F_1$$:
+Cập nhật $$F_{m-1}$$ thành $$F_{m}$$:
 
-$$F_1(x) = F_0(x) + \nu \gamma$$
+$$F_{m}(x) = F_{m-1}(x) + \nu \gamma$$
 
 Với:
 $$\nu$$: là learning rate
 
 $$\gamma$$: là giá trị dự đoán của Leaf Node
 
-### Bước 6:
+$$\m$$: là số lượng Tree
 
-Lặp lại bước 2,3,4,5 với mỗi lần lặp $$F_m$$ sẽ tăng lên tương ứng với số Regression Tree đã tạo. Đến khi đủ số Regression Tree thì ta dừng thuật toán.
+### Bước 6:
+{: .no_toc }
+
+Lặp lại bước 2,3,4,5 với mỗi lần lặp $$F_m$$ sẽ tăng lên tương ứng với số Regression Tree đã tạo. Đến khi đủ số Regression Tree thì ta dừng thuật toán. 
+Kết quả sẽ được dự đoán bằng F_M(x).
 
 <hr>
 
