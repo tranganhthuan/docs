@@ -416,4 +416,19 @@ $$\begin{align}
 ### Bước 2:
 {: .no_toc }
 
-Tạo Residual ứng với mỗi Sample (Chút viết tiếp)
+Tạo Residual ứng với mỗi Sample, giá trị của Residual được tính bằng:
+
+$$r_{i,m} = y_i - F(x)$$
+
+Với:
+
+$$F(x)$$: là hàm mới được tạo - cụ thể ở lần đầu này là {F_0(x)}
+
+Giải thích:
+- Vì Lost Function có công thức:
+
+$$L(y, F(x)) = \frac{1}{2} (y - F(x))^2$$
+
+- Nên khi đạo hàm theo $$F(x)$$ ta được:
+
+$$-\frac{\partial L(y, F(x))}{\partial F(x)} = $$
