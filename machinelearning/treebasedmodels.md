@@ -429,6 +429,8 @@ Lặp lại bước 2,3,4,5 với $$m$$ tăng lên 1 cho đến khi $$m$$ bằng
 
 Dự đoán tất cả giá trị bằng giá trị trung bình của Label, vì giá trị này giúp hàm Cost Function đạt giá trị nhỏ nhất. 
 
+$$F_0 = mean$$
+
 Giải thích:
 
 - Hàm Cost Function là hàm Mean Squared Error (MSE) - nhân $$\frac{1}{2}$$ để đạo hàm triệt tiêu, có dạng:
@@ -518,6 +520,23 @@ Vậy $$\gamma$$ chính là giá trị trung bình của Leaf Node.
 
 ### Bước 5:
 {: .no_toc }
+
+Cập nhật $$F_0$$ thành $$F_1$$:
+
+$$F_1(x) = F_0(x) + \nu \gamma$$
+
+Với:
+$$\nu$$: là learning rate
+
+$$\gamma$$: là giá trị dự đoán của Leaf Node
+
+### Bước 6:
+
+Lặp lại bước 2,3,4,5 với mỗi lần lặp $$F_m$$ sẽ tăng lên tương ứng với số Regression Tree đã tạo. Đến khi đủ số Regression Tree thì ta dừng thuật toán.
+
+<hr>
+
+## Gradient Boosting - Classification:
 
 (Coming soon)
 
