@@ -431,4 +431,8 @@ $$L(y, F(x)) = \frac{1}{2} (y - F(x))^2$$
 
 - Nên khi đạo hàm theo $$F(x)$$ ta được:
 
-$$-\frac{\partial L(y, F(x))}{\partial F(x)} = $$
+$$\frac{\partial L(y, F(x))}{\partial F(x)} = -(y - F(x))$$
+
+- Suy ra:
+
+$$r_{i,m} = - \frac{\partial L(y, F(x))}{\partial F(x)} = y_i - F(x)$$
