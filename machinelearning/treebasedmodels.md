@@ -403,7 +403,22 @@ $$x_i \in \mathbb{R}_{j,m}$$: là những phần tử ở trong Leaf Node thứ 
 ### Bước 5:
 {: .no_toc }
 
-(Coming soon)
+Update hàm F_m(x):
+
+$$F_m(x) = F_{m-1}(x) + \nu \sum_{j = 1}^{J_m} \gamma_{j,m} I(x_i \in \mathbb{R}_{j,m})$$
+
+Với:
+
+$$\sum_{j = 1}^{J_m}$$: được sử dụng trong trường hợp một Sample có thể ở nhiều Leaf Node, thì ta cộng tất cả giá trị này lại
+
+$$\gamma_{j,m} I(x_i \in \mathbb{R}_{j,m})$$: là $$\gamma$$  của Leaf Node chứa $$x_i$$
+
+$$\nu$$: là learning rate
+
+### Bước 6
+{: .no_toc }
+
+Lặp lại bước 2,3,4,5 với $$m$$ tăng lên 1 cho đến khi $$m$$ bằng $$M$$ - số Tree ta muốn tạo.
 
 <hr/>
 
@@ -460,7 +475,12 @@ $$r_{i,m} = - \frac{\partial L(y, F(x))}{\partial F(x)} = y_i - F(x)$$
 ### Bước 3:
 {: .no_toc }
 
-(Coming soon)
+Tạo ra một Regression Tree để fit vào tập dữ liệu với Label là cột Residual.
+
+### Bước 4:
+{: .no_toc }
+
+Giá trị dự đoán từ Leaf Node của Regression Tree mới tạo này chính là $$\gamma_{j,m}$$ - giá trị để Cost Function ở mỗi Leaf Node là nhỏ nhất.
 
 <hr>
 
