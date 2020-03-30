@@ -482,6 +482,45 @@ Tạo ra một Regression Tree để fit vào tập dữ liệu với Label là 
 
 Giá trị dự đoán từ Leaf Node của Regression Tree mới tạo này chính là $$\gamma_{j,m}$$ - giá trị để Cost Function ở mỗi Leaf Node là nhỏ nhất.
 
+Giải thích:
+
+Hàm Cost Function của mỗi Leaf Node có công thức:
+
+$$Cost = \sum_{x_i \in \mathbb{R}_{j,m}} L(y_i,F_{m-1}(x_i) + \gamma)$$
+
+Lấy Lost Function là MSE:
+
+$$L(y_i,F_{m-1}(x_i) + \gamma) = \frac{1}{2} (y_i - (F_{m-1}(x_i) + \gamma))^2$$
+
+Ta được:
+
+$$Cost = \sum_{x_i \in \mathbb{R}_{j,m}} \frac{1}{2} (y_i - (F_{m-1}(x_i) + \gamma))^2$$
+
+Lấy đạo hàm hàm này:
+
+$$\frac{\partial Cost}{\partial \gamma} = - \sum_{x_i \in \mathbb{R}_{j,m}} (y_i - (F_{m-1}(x_i) + \gamma))$$
+
+Cho hàm này bằng 0 ta được:
+
+$$\begin{align}
+\sum_{x_i \in \mathbb{R}_{j,m}} (y_i - (F_{m-1}(x_i) + \gamma)) &= 0 \\
+k \gamma &= \sum_{x_i \in \mathbb{R}_{j,m}} (y_i - F_{m-1}(x_i))
+\gamma &= \frac{\sum_{x_i \in \mathbb{R}_{j,m}} (y_i - F_{m-1}(x_i))}{k} 
+\end{align}$$
+
+Với:
+
+$$k$$: là số phần tử trong Leaf Node
+
+$$y_i - F_{m-1}(x_i)$$: là giá trị của cột Residual
+
+Vậy $$\gamma$$ chính là giá trị trung bình của Leaf Node.
+
+### Bước 5:
+{: .no_toc }
+
+(Coming soon)
+
 <hr>
 
 > Tham khảo từ:
