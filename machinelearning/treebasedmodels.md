@@ -378,12 +378,18 @@ $$r_{i,m} = -\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}$$
 
 Với:
 
-$$F(x) = F_{m-1}(x)$$: là hàm dự đoán vừa mới tạo
+$$F(x) = F_{m-1}(x)$$: là hàm dự đoán vừa được tạo.
 
 ### Bước 3:
 {: .no_toc }
 
-(Coming soon)
+Tạo Decision Tree (Regression) với Label được thay bằng vector $$r$$ (tập hợp của $$r_{i,m}$$). Các Decision Tree trong Gradient Boost được scale về cùng kích cỡ.
+
+### Bước 4:
+{: .no_toc }
+
+Với mỗi leaf của Decision Tree mới tạo tính $$\gamma_{j,m}$$:
+$$\gamma_{j,m} = \underset{\gamma}{\operatorname{argmax}} \sum_{x_i \in \Reals_{i,j}} L(y_i,F_{m-1}(x_i) + \gamma)$$
 
 <hr/>
 
@@ -396,7 +402,7 @@ Dự đoán tất cả giá trị bằng giá trị trung bình của Label, vì
 
 Giải thích:
 
-- Hàm Cost Function là hàm Mean Squared Error (MSE) - nhân $$\frac{1}{2}$$ để dễ đạo hàm, có dạng:
+- Hàm Cost Function là hàm Mean Squared Error (MSE) - nhân $$\frac{1}{2}$$ để đạo hàm triệt tiêu, có dạng:
 
 $$Cost = \frac{1}{2} \frac{1}{n} \sum_{i = 1}^n (y_i - \gamma)^2$$
 
@@ -436,3 +442,9 @@ $$\frac{\partial L(y, F(x))}{\partial F(x)} = -(y - F(x))$$
 - Suy ra:
 
 $$r_{i,m} = - \frac{\partial L(y, F(x))}{\partial F(x)} = y_i - F(x)$$
+
+<hr>
+
+> Tham khảo từ:
+> https://www.youtube.com/watch?v=3CC4N4z3GJc&t=408s
+> https://www.youtube.com/watch?v=2xudPOBz-vs&t=1008s
