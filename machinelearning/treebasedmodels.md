@@ -17,7 +17,7 @@ parent: Machine Learning
 
 <hr/>
 
-## Decision Tree - Khái niệm.
+## Tree - Khái niệm.
 
 ### Phân theo chức năng:
 {: .no_toc }
@@ -57,7 +57,7 @@ parent: Machine Learning
 
 <hr/>
 
-## Decision Tree - Classification.
+## Decision Tree.
 
 ### Bước 1: 
 {: .no_toc }
@@ -180,12 +180,12 @@ Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được d�
 
 <hr/>
 
-## Decision Tree - Regression.
+## Regression Tree.
 
 ### Bước 1: 
 {: .no_toc }
 
-Split Parent Node thành 2 node (Giống như Decision Tree - Classification).
+Split Parent Node thành 2 node (Giống như Decision Tree).
 
 ### Bước 2: 
 {: .no_toc }
@@ -217,7 +217,7 @@ Lặp lại bước 1,2,3 với 2 child node vừa được chia, xem mỗi chil
 ### Bước 5: 
 {: .no_toc }
 
-Sau khi đã có được Decision Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label của Sample sẽ là giá trị trung bình của các Label trong Leaf Node đó.
+Sau khi đã có được Regression Tree hoàn chỉnh. Sample cần được dự đoán sẽ được hỏi qua các câu hỏi ở Decision Node cho đến khi tới Leaf Node. Label của Sample sẽ là giá trị trung bình của các Label trong Leaf Node đó.
 
 <hr/>
 
@@ -241,7 +241,7 @@ Cách tạo Boostrapped Sample với size $$k$$:
 ### Bước 2: 
 {: .no_toc }
 
-Tạo Decision Tree ứng với mỗi Boostrapped Sample. Với mỗi lần split, chỉ chọn một số Features để xem xét.
+Tạo Tree ứng với mỗi Boostrapped Sample. Với mỗi lần split, chỉ chọn một số Features để xem xét.
 
 ### Bước 3: 
 {: .no_toc }
@@ -251,9 +251,11 @@ Lặp lại bước 1,2 cho đến khi đủ số tree mong muốn.
 ### Bước 4: 
 {: .no_toc }
 
-Khi đã có Random Forest, mỗi Sample đưa vào sẽ được dự đoán bởi tất cả Decision Tree - các Decision Tree sẽ vote cho các Label. Label của Sample sẽ là Label được vote nhiều nhất.  
+Khi đã có Random Forest, mỗi Sample đưa vào sẽ được dự đoán bởi tất cả Tree. 
 
-Độ chính xác của Random Forest có thể được tính bằng **Out of Bag Score**.
+- Classification: Label của Sample sẽ là Label được vote nhiều nhất.  
+
+- Regression: Label của Sample là trung bình cộng của các kết quả dự đoán.
 
 <hr/>
 
@@ -277,16 +279,16 @@ $$n$$: là tổng số phần tử.
 ### Bước 2: 
 {: .no_toc }
 
-Chọn cách chia tốt nhất (giống như Decision Tree). Tạo được một Decision Tree với cách chia này. 
+Chọn cách chia tốt nhất (giống như Decision Tree/Regression Tree). Tạo được một Tree với cách chia này. 
 
-Decision Tree chỉ với  một Decision Node được gọi là một **Stump** - **Weak Learner**.
+Tree chỉ với  một Decision Node được gọi là một **Stump** - **Weak Learner**.
 
 ### Bước 3: 
 {: .no_toc }
 
-Tính **Amount of Say** của Decision Tree này. Amount of Say càng lớn thì khi predict sample mới, vote của tree sẽ càng có giá trị.
+Tính **Amount of Say** của Tree này. Amount of Say càng lớn thì khi predict sample mới, vote của tree sẽ càng có giá trị.
 
-Ta dùng Decision Tree vừa mới tạo dự đoán lại tập dữ liệu ở trên. Khi đó, Amount of Say được tính bằng công thức:
+Ta dùng Tree vừa mới tạo dự đoán lại tập dữ liệu ở trên. Khi đó, Amount of Say được tính bằng công thức:
 
 $$\text{Amount of Say} = \frac{1}{2} \log(\frac{1 - \text{Total Error}}{\text{Total Error}})$$
 
@@ -383,20 +385,20 @@ $$F(x) = F_{m-1}(x)$$: là hàm dự đoán vừa được tạo.
 ### Bước 3:
 {: .no_toc }
 
-Tạo Decision Tree (Regression) với Label được thay bằng vector $$r$$ (tập hợp của $$r_{i,m}$$). Các Decision Tree trong Gradient Boost được scale về cùng kích cỡ.
+Tạo Tree với Label được thay bằng vector $$r$$ (tập hợp của $$r_{i,m}$$). Các Tree trong Gradient Boost được scale về cùng kích cỡ.
 
 ### Bước 4:
 {: .no_toc }
 
-Với mỗi leaf của Decision Tree mới tạo tính $$\gamma_{j,m}$$ bằng $$\gamma$$ để hàm Cost Function của Leaf Node đạt giá trị nhỏ nhất:
+Với mỗi leaf của Tree mới tạo tính $$\gamma_{j,m}$$ bằng $$\gamma$$ để hàm Cost Function của Leaf Node đạt giá trị nhỏ nhất:
 
 $$\gamma_{j,m} = \underset{\gamma}{\operatorname{argmax}} \sum_{x_i \in \mathbb{R}_{j,m}} L(y_i,F_{m-1}(x_i) + \gamma)$$
 
 Với:
 
-$$j,m$$: là Leaf Node thứ $$j$$ của Decision Tree thứ $$m$$ 
+$$j,m$$: là Leaf Node thứ $$j$$ của Tree thứ $$m$$ 
 
-$$x_i \in \mathbb{R}_{j,m}$$: là những phần tử ở trong Leaf Node thứ $$j$$ của Decision Tree thứ $$m$$ - những phần tử ngoài Leaf Node sẽ bị bỏ qua. 
+$$x_i \in \mathbb{R}_{j,m}$$: là những phần tử ở trong Leaf Node thứ $$j$$ của Tree thứ $$m$$ - những phần tử ngoài Leaf Node sẽ bị bỏ qua. 
 
 ### Bước 5:
 {: .no_toc }
@@ -454,6 +456,11 @@ $$\frac{\partial L(y, F(x))}{\partial F(x)} = -(y - F(x))$$
 - Suy ra:
 
 $$r_{i,m} = - \frac{\partial L(y, F(x))}{\partial F(x)} = y_i - F(x)$$
+
+### Bước 3:
+{: .no_toc }
+
+(Coming soon)
 
 <hr>
 
