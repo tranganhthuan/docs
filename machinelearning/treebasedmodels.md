@@ -446,5 +446,7 @@ $$r_{i,m} = - \frac{\partial L(y, F(x))}{\partial F(x)} = y_i - F(x)$$
 <hr>
 
 > Tham khảo từ:
+>
 > https://www.youtube.com/watch?v=3CC4N4z3GJc&t=408s
+>
 > https://www.youtube.com/watch?v=2xudPOBz-vs&t=1008s
