@@ -372,7 +372,20 @@ Hàm này trả về giá trị $$\gamma$$ sao cho Cost Function đạt giá tr�
 
 ### Bước 2:
 {: .no_toc }
+Tính $$r_{i,m}$$, với:
+
+$$r_{i,m} = -\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}$$
+
+Với:
+
+$$F(x) = F_{m-1}(x)$$: là hàm dự đoán vừa mới tạo
+
+### Bước 3:
+{: .no_toc }
+
 (Coming soon)
+
+<hr/>
 
 ## Gradient Boosting - Regression
 
@@ -395,9 +408,12 @@ $$\frac{\partial Cost}{\partial \gamma} = - \frac{1}{n} \sum_{i = 1}^n (y_i - \g
 
 $$\begin{align}
   - \frac{1}{n} \sum_{i = 1}^n (y_i - \gamma) &= 0 \\
-      \gamma &= - \frac{1}{n} \sum_{i = 1}^n y_i \\
+      \gamma &= \frac{1}{n} \sum_{i = 1}^n y_i \\
 \end{align}$$
 
 - Ta thấy, hàm Cost Function đạt giá trị nhỏ nhất, khi $$\gamma$$ là giá trị trung bình của $$y$$ - Label.
 
 ### Bước 2:
+{: .no_toc }
+
+Tạo Residual ứng với mỗi Sample (Chút viết tiếp)
