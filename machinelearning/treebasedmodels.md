@@ -379,18 +379,25 @@ Hàm này trả về giá trị $$\gamma$$ sao cho Cost Function đạt giá tr�
 ### Bước 1:
 {: .no_toc }
 
-Dự đoán tất cả giá trị bằng giá trị trung bình của cột Label, vì giá trị này giúp hàm Cost Function đạt giá trị nhỏ nhất. 
+Dự đoán tất cả giá trị bằng giá trị trung bình của Label, vì giá trị này giúp hàm Cost Function đạt giá trị nhỏ nhất. 
 
 Giải thích:
 
 - Hàm Cost Function là hàm Mean Squared Error (MSE) - nhân $$\frac{1}{2}$$ để dễ đạo hàm, có dạng:
 
-$$Cost = \frac{1}{2} \frac{1}{n} \sum_{i = 1}^n (y - \gamma)^2$$
+$$Cost = \frac{1}{2} \frac{1}{n} \sum_{i = 1}^n (y_i - \gamma)^2$$
 
 - Lấy đạo hàm theo $$\gamma$$ ta được:
 
-$$\frac{\partial Cost}{\partial \gamma} = - \frac{1}{n} \sum_{i = 1}^n (y - \gamma)$$
+$$\frac{\partial Cost}{\partial \gamma} = - \frac{1}{n} \sum_{i = 1}^n (y_i - \gamma)$$
 
 - Cho đạo hàm bằng $$0$$:
 
-$$- \frac{1}{n} \sum_{i = 1}^n (y - \gamma) = 0$$
+$$\begin{align}
+  - \frac{1}{n} \sum_{i = 1}^n (y_i - \gamma) &= 0 \\
+      \gamma &= - \frac{1}{n} \sum_{i = 1}^n y_i \\
+\end{align}$$
+
+- Ta thấy, hàm Cost Function đạt giá trị nhỏ nhất, khi $$\gamma$$ là giá trị trung bình của $$y$$ - Label.
+
+### Bước 2:
