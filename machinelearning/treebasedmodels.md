@@ -536,7 +536,7 @@ $$\m$$: là số lượng Tree
 {: .no_toc }
 
 Lặp lại bước 2,3,4,5 với mỗi lần lặp $$F_m$$ sẽ tăng lên tương ứng với số Regression Tree đã tạo. Đến khi đủ số Regression Tree thì ta dừng thuật toán. 
-Kết quả sẽ được dự đoán bằng F_M(x).
+Kết quả sẽ được dự đoán bằng $$F_M(x)$$.
 
 <hr>
 
