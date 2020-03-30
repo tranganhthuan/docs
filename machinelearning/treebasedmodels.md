@@ -388,8 +388,20 @@ Tạo Decision Tree (Regression) với Label được thay bằng vector $$r$$ (
 ### Bước 4:
 {: .no_toc }
 
-Với mỗi leaf của Decision Tree mới tạo tính $$\gamma_{j,m}$$:
-$$\gamma_{j,m} = \underset{\gamma}{\operatorname{argmax}} \sum_{x_i \in \Reals_{i,j}} L(y_i,F_{m-1}(x_i) + \gamma)$$
+Với mỗi leaf của Decision Tree mới tạo tính $$\gamma_{j,m}$$ bằng $$\gamma$$ để hàm Cost Function của Leaf Node đạt giá trị nhỏ nhất:
+
+$$\gamma_{j,m} = \underset{\gamma}{\operatorname{argmax}} \sum_{x_i \in \mathbb{R}_{j,m}} L(y_i,F_{m-1}(x_i) + \gamma)$$
+
+Với:
+
+$$j,m$$: là Leaf Node thứ $$j$$ của Decision Tree thứ $$m$$ 
+
+$$x_i \in \mathbb{R}_{j,m}$$: là những phần tử ở trong Leaf Node thứ $$j$$ của Decision Tree thứ $$m$$ - những phần tử ngoài Leaf Node sẽ bị bỏ qua. 
+
+### Bước 5:
+{: .no_toc }
+
+(Coming soon)
 
 <hr/>
 
@@ -447,6 +459,12 @@ $$r_{i,m} = - \frac{\partial L(y, F(x))}{\partial F(x)} = y_i - F(x)$$
 
 > Tham khảo từ:
 >
-> https://www.youtube.com/watch?v=3CC4N4z3GJc&t=408s
+> [StatQuest: Decision Trees](https://www.youtube.com/watch?v=7VeUPuFGJHk&t=32s)
 >
-> https://www.youtube.com/watch?v=2xudPOBz-vs&t=1008s
+> [Regression Trees, Clearly Explained!!!](https://www.youtube.com/watch?v=g9c66TUylZ4&t=1116s)
+>
+> [Gradient Boost Part 1: Regression Main Ideas](https://www.youtube.com/watch?v=3CC4N4z3GJc&t=408s)
+>
+> [Gradient Boost Part 2: Regression Details](https://www.youtube.com/watch?v=2xudPOBz-vs&t=1008s)
+>
+> [Bài 34: Decision Trees (1): Iterative Dichotomiser 3](https://machinelearningcoban.com/2018/01/14/id3/)
