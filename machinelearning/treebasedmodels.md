@@ -540,9 +540,30 @@ Kết quả sẽ được dự đoán bằng $$F_M(x)$$.
 
 <hr>
 
-## Gradient Boosting - Classification:
+## Gradient Boosting - Classification
 
-(Coming soon)
+### Bước 1:
+{: .no_toc }
+
+Dự đoán tất cả giá trị bằng giá trị xác suất của True ở cột Label, vì giá trị này giúp hàm Cost Function đạt giá trị nhỏ nhất. 
+
+$$F_0 = p$$
+
+Giải thích:
+
+- Hàm Cost Function là hàm  Negative Log Likelihood, có dạng:
+
+$$Cost = -\sum_{i=1}^n (y_i \log {\gamma}_i + (1-y_i) \log (1 - \gamma))$$
+
+- Đạo hàm hàm này ta có:
+
+$$\begin{align}
+\frac{\partial Cost}{\partial \gamma} &= -\sum_{i=1}^n \frac{y_i}{\gamma} - \frac{1-y_i}{1-\gamma} \\
+\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n \frac{1-y_i}{1-\gamma} - \frac{y_i}{\gamma} \\
+\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n \frac{\gamma - y}{(1 - \gamma)(\gamma)}
+\end{align}$$
+
+- Cho đạo hàm bằng $$0$$:
 
 <hr>
 
