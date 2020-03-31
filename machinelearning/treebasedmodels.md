@@ -530,7 +530,7 @@ $$\nu$$: là learning rate
 
 $$\gamma$$: là giá trị dự đoán của Leaf Node
 
-$$\m$$: là số lượng Tree
+$$m$$: là số lượng Tree
 
 ### Bước 6:
 {: .no_toc }
