@@ -560,7 +560,7 @@ Giải thích:
 
 - Hàm Cost Function là hàm  Negative Log Likelihood, có dạng:
 
-$$Cost = -\sum_{i=1}^n (y_i \log \sigma(\gamma)_i + (1-y_i) \log (1 - \sigma(\gamma)))$$
+$$Cost = -\sum_{i=1}^n (y_i \log \sigma(\gamma) + (1-y_i) \log (1 - \sigma(\gamma)))$$
 
 Với:
 
@@ -570,14 +570,14 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$: là hàm sigmoid theo $$x$$
 
 	- Đặt $$\sigma(\gamma)$$ là $$s$$, ta có: 
 
-	$$Cost = -\sum_{i=1}^n (y_i \log s_i + (1-y_i) \log (1 - s))$$
+	$$Cost = -\sum_{i=1}^n (y_i \log s + (1-y_i) \log (1 - s))$$
 
 	- Đạo hàm hàm Cost theo $$s$$:
 	
 	$$\begin{align}
-	\frac{\partial Cost}{\partial \gamma} &= -\sum_{i=1}^n \frac{y_i}{\gamma} - \frac{1-y_i}{1-\gamma} \\
-	\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n \frac{1-y_i}{1-\gamma} - \frac{y_i}{\gamma} \\
-	\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n \frac{\gamma - y}{(1 - \gamma)(\gamma)}
+	\frac{\partial Cost}{\partial s} &= -\sum_{i=1}^n \frac{y_i}{s} - \frac{1-y_i}{1-s} \\
+	\frac{\partial Cost}{\partial s} &= \sum_{i=1}^n \frac{1-y_i}{1-s} - \frac{y_i}{s} \\
+	\frac{\partial Cost}{\partial s} &= \sum_{i=1}^n \frac{s - y}{(1 - s)(s}
 	\end{align}$$
 
 - Cho đạo hàm bằng $$0$$:
