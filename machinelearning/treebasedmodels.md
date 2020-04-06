@@ -526,6 +526,7 @@ Cập nhật $$F_{m-1}$$ thành $$F_{m}$$:
 $$F_{m}(x) = F_{m-1}(x) + \nu \gamma$$
 
 Với:
+
 $$\nu$$: là learning rate
 
 $$\gamma$$: là giá trị dự đoán của Leaf Node
@@ -547,26 +548,42 @@ Kết quả sẽ được dự đoán bằng $$F_M(x)$$.
 ### Bước 1:
 {: .no_toc }
 
-Dự đoán tất cả giá trị bằng giá trị xác suất của True ở cột Label, vì giá trị này giúp hàm Cost Function đạt giá trị nhỏ nhất. 
+Dự đoán tất cả giá trị bằng $$log(odds)$$ cột Label, vì giá trị này giúp hàm Cost Function đạt giá trị nhỏ nhất:
 
-$$F_0 = p$$
+$$F_0 = log(odds)$$
+
+Với:
+
+$$\text{odds} = \frac{p_{True}}{p_{False}}$$
 
 Giải thích:
 
 - Hàm Cost Function là hàm  Negative Log Likelihood, có dạng:
 
-$$Cost = -\sum_{i=1}^n (y_i \log {\gamma}_i + (1-y_i) \log (1 - \gamma))$$
+$$Cost = -\sum_{i=1}^n (y_i \log \sigma(\gamma)_i + (1-y_i) \log (1 - \sigma(\gamma)))$$
 
-- Đạo hàm hàm này ta có:
+Với:
 
-$$\begin{align}
-\frac{\partial Cost}{\partial \gamma} &= -\sum_{i=1}^n \frac{y_i}{\gamma} - \frac{1-y_i}{1-\gamma} \\
-\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n \frac{1-y_i}{1-\gamma} - \frac{y_i}{\gamma} \\
-\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n \frac{\gamma - y}{(1 - \gamma)(\gamma)}
-\end{align}$$
+$$\sigma(x) = \frac{1}{1+e^{-x}}$$: là hàm sigmoid theo $$x$$
+
+- Dùng đạo hàm từng phần (chain rules) để đạo hàm hàm Cost theo $$\lambda$$ trên:
+
+	- Đặt $$\sigma(\gamma)$$ là $$s$$, ta có: 
+
+	$$Cost = -\sum_{i=1}^n (y_i \log s_i + (1-y_i) \log (1 - s))$$
+
+	- Đạo hàm hàm Cost theo $$s$$:
+	
+	$$\begin{align}
+	\frac{\partial Cost}{\partial \gamma} &= -\sum_{i=1}^n \frac{y_i}{\gamma} - \frac{1-y_i}{1-\gamma} \\
+	\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n \frac{1-y_i}{1-\gamma} - \frac{y_i}{\gamma} \\
+	\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n \frac{\gamma - y}{(1 - \gamma)(\gamma)}
+	\end{align}$$
 
 - Cho đạo hàm bằng $$0$$:
+
 	- Cho tử bằng $$0$$:
+	
 	$$\begin{align}
 	\sum_{i=1}^n (\gamma - y) &= 0 \\
 	n\gamma - \sum_{i=1}^n y &= 0 \\ 
@@ -574,6 +591,7 @@ $$\begin{align}
 	\end{align}$$
 	
 	- Đặt điều kiện để mẫu khác $$0$$:
+	
 	$$\begin{cases}
   	\gamma &\not = 0 \\
    	\gamma &\not = 1
