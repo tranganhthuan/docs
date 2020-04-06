@@ -506,7 +506,7 @@ Cho hàm này bằng 0 ta được:
 
 $$\begin{align}
 \sum_{x_i \in \mathbb{R}_{j,m}} (y_i - (F_{m-1}(x_i) + \gamma)) &= 0 \\
-k \gamma &= \sum_{x_i \in \mathbb{R}_{j,m}} (y_i - F_{m-1}(x_i))
+k \gamma &= \sum_{x_i \in \mathbb{R}_{j,m}} (y_i - F_{m-1}(x_i)) \\
 \gamma &= \frac{\sum_{x_i \in \mathbb{R}_{j,m}} (y_i - F_{m-1}(x_i))}{k} 
 \end{align}$$
 
@@ -564,6 +564,22 @@ $$\begin{align}
 \end{align}$$
 
 - Cho đạo hàm bằng $$0$$:
+	- Cho tử bằng $$0$$:
+	$$\begin{align}
+	\sum_{i=1}^n (\gamma - y) &= 0 \\
+	n\gamma - \sum_{i=1}^n y &= 0 \\ 
+	\gamma &= \frac{\sum_{i=1}^n y}{n}
+	\end{align}$$
+	
+	- Đặt điều kiện để mẫu khác $$0$$:
+	$$\begin{cases}
+  	\gamma &\not = 0 \\
+   	\gamma &\not = 1
+	\end{cases}$$
+	
+Nếu để ý kĩ giá trị $$\gamma$$ chính bằng xác suất của True vì tổng của $$y$$ chính là số lần xuất hiện của giá trị True.
+
+### Bước 2:
 
 <hr>
 
