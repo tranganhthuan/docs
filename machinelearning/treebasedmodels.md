@@ -583,9 +583,9 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$: là hàm sigmoid theo $$x$$
 	- Đạo hàm hàm $$s$$ theo $$\gamma$$:
 	
 	$$\begin{align}
-	\frac{\partial s}{\partial \gramma} &= - \frac{1}{(1+e^{-\gramma})^2} \\
-	\frac{\partial s}{\partial \gramma} &= \sum_{i=1}^n \frac{1-y_i}{1-s} - \frac{y_i}{s} \\
-	\frac{\partial s}{\partial \gramma} &= \sum_{i=1}^n \frac{s - y}{(1 - s)(s}
+	\frac{\partial s}{\partial \gamma} &= - \frac{1}{(1+e^{-\gamma})^2} \\
+	\frac{\partial s}{\partial \gamma} &= \sum_{i=1}^n \frac{1-y_i}{1-s} - \frac{y_i}{s} \\
+	\frac{\partial s}{\partial \gamma} &= \sum_{i=1}^n \frac{s - y}{(1 - s)(s}
 	\end{align}$$
 	
 
