@@ -554,7 +554,7 @@ $$F_0 = log(odds)$$
 
 Với:
 
-$$\text{odds} = \frac{p_{True}}{p_{False}}$$
+$$\text{odds} = \frac{True}{False} = \frac{p_{True}}{p_{False}}$$
 
 Giải thích:
 
@@ -579,6 +579,15 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$: là hàm sigmoid theo $$x$$
 	\frac{\partial Cost}{\partial s} &= \sum_{i=1}^n \frac{1-y_i}{1-s} - \frac{y_i}{s} \\
 	\frac{\partial Cost}{\partial s} &= \sum_{i=1}^n \frac{s - y}{(1 - s)(s}
 	\end{align}$$
+	
+	- Đạo hàm hàm $$s$$ theo $$\gamma$$:
+	
+	$$\begin{align}
+	\frac{\partial s}{\partial \gramma} &= - \frac{1}{(1+e^{-\gramma})^2} \\
+	\frac{\partial s}{\partial \gramma} &= \sum_{i=1}^n \frac{1-y_i}{1-s} - \frac{y_i}{s} \\
+	\frac{\partial s}{\partial \gramma} &= \sum_{i=1}^n \frac{s - y}{(1 - s)(s}
+	\end{align}$$
+	
 
 - Cho đạo hàm bằng $$0$$:
 
