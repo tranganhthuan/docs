@@ -542,6 +542,8 @@ Kết quả sẽ được dự đoán bằng $$F_M(x)$$.
 
 ## Gradient Boosting - Classification
 
+(Coming soon - Cái ở dưới sai)
+
 ### Bước 1:
 {: .no_toc }
 
@@ -580,6 +582,7 @@ $$\begin{align}
 Nếu để ý kĩ giá trị $$\gamma$$ chính bằng xác suất của True vì tổng của $$y$$ chính là số lần xuất hiện của giá trị True.
 
 ### Bước 2:
+{: .no_toc }
 
 <hr>
 
