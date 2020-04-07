@@ -503,7 +503,7 @@ Lấy đạo hàm hàm này:
 
 $$\frac{\partial Cost}{\partial \gamma} = - \sum_{x_i \in \mathbb{R}_{j,m}} (y_i - (F_{m-1}(x_i) + \gamma))$$
 
-Cho hàm này bằng 0 ta được:
+Cho hàm này bằng 0, ta được:
 
 $$\begin{align}
 \sum_{x_i \in \mathbb{R}_{j,m}} (y_i - (F_{m-1}(x_i) + \gamma)) &= 0 \\
@@ -669,6 +669,18 @@ $$L(y, F(x)) = (y \log \sigma(F_{m-1}(x) + \gamma) + (1-y) \log (1 - \sigma(F_{m
 Ta được:
 
 $$Cost = \sum_{x_i \in \mathbb{R}_{j,m}} (y_i \log(\sigma(F_{m-1}(x_i) + \gamma)) + (1-y) \log (1 - \sigma(F_{m-1}(x_i) + \gamma)))^2$$
+
+Lấy đạo hàm hàm này: 
+
+$$\frac{\partial Cost}{\partial \gamma} = \sum_{x_i \in \mathbb{R}_{j,m}} (y - \sigma(F_{m-1}(x_i) + \gamma))$$
+
+Cho hàm này bằng $$0$$, ta được:
+
+$$\begin{align}
+\sum_{x_i \in \mathbb{R}_{j,m}} (y - \sigma(F_{m-1}(x_i) + \gamma)) &= 0 \\
+\end{align}$$
+
+Mai viết tiếp
 
 <hr>
 
