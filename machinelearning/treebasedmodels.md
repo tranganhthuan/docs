@@ -473,7 +473,7 @@ $$\frac{\partial L(y, F(x))}{\partial F(x)} = -(y - F(x))$$
 
 - Suy ra:
 
-$$r_{i,m} = - \frac{\partial L(y, F(x))}{\partial F(x)} = y_i - F(x)$$
+$$r_{i,m} = - \frac{\partial L(y_i, F(x))}{\partial F(x)} = y_i - F(x)$$
 
 ### Bước 3:
 {: .no_toc }
@@ -636,15 +636,15 @@ Giải thích:
 
 - Vì Lost Function có công thức:
 
-$$L(y, F(x)) = (y_i \log \sigma(\gamma) + (1-y_i) \log (1 - \sigma(\gamma)))$$
+$$L(y, F(x)) = (y \log \sigma(\gamma) + (1-y) \log (1 - \sigma(\gamma)))$$
 
 - Nên khi đạo hàm theo $$F(x)$$ (tính tương tự đạo hàm hàm Cost), ta được:
 
-$$\frac{\partial L(y, F(x))}{\partial F(x)} = -(y - \sigma(F(x)))$$
+$$\frac{\partial L(y, F(x))}{\partial F(x)} = - (y - \sigma(F(x)))$$
 
 - Suy ra:
 
-$$r_{i,m} = - \frac{\partial L(y, F(x))}{\partial F(x)} = y_i - \sigma(F(x))$$
+$$r_{i,m} = - \frac{\partial L(y_i, F(x))}{\partial F(x)} = y_i - \sigma(F(x))$$
 
 <hr>
 
