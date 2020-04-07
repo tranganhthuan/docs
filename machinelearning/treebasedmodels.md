@@ -577,34 +577,32 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$: là hàm sigmoid theo $$x$$
 	$$\begin{align}
 	\frac{\partial Cost}{\partial s} &= -\sum_{i=1}^n \frac{y_i}{s} - \frac{1-y_i}{1-s} \\
 	\frac{\partial Cost}{\partial s} &= \sum_{i=1}^n \frac{1-y_i}{1-s} - \frac{y_i}{s} \\
-	\frac{\partial Cost}{\partial s} &= \sum_{i=1}^n \frac{s - y}{(1 - s)(s}
+	\frac{\partial Cost}{\partial s} &= \sum_{i=1}^n \frac{s - y}{(1 - s)s}
 	\end{align}$$
 	
 	- Đạo hàm hàm $$s$$ theo $$\gamma$$:
 	
 	$$\begin{align}
-	\frac{\partial s}{\partial \gamma} &= - \frac{1}{(1+e^{-\gamma})^2} \\
-	\frac{\partial s}{\partial \gamma} &= \sum_{i=1}^n \frac{1-y_i}{1-s} - \frac{y_i}{s} \\
-	\frac{\partial s}{\partial \gamma} &= \sum_{i=1}^n \frac{s - y}{(1 - s)(s}
+	\frac{\partial s}{\partial \gamma} &= \frac{e^{-\gamma}}{(1+e^{-\gamma})^2} \\
+	\frac{\partial s}{\partial \gamma} &= \frac{1}{1+e^{-\gamma}} \frac{e^{-\gamma}}{1+e^{-\gamma}} \\
+	\frac{\partial s}{\partial \gamma} &= \frac{1}{1+e^{-\gamma}} (1 - \frac{e^{-\gamma}}{1+e^{-\gamma}}) \\
+	\frac{\partial s}{\partial \gamma} &= s(1 - s) \\
 	\end{align}$$
 	
-
-- Cho đạo hàm bằng $$0$$:
-
-	- Cho tử bằng $$0$$:
+	- Vậy đạo hàm Cost theo $$\gamma$$ là:
 	
 	$$\begin{align}
-	\sum_{i=1}^n (\gamma - y) &= 0 \\
-	n\gamma - \sum_{i=1}^n y &= 0 \\ 
-	\gamma &= \frac{\sum_{i=1}^n y}{n}
+	\frac{\partial Cost}{\partial \gamma} &= \frac{(s - y)(1 - s)s}{(1 - s)s} \\
+	\frac{\partial Cost}{\partial \gamma} &= (s - y) \\
 	\end{align}$$
+
+- Cho đạo hàm bằng $$0$$:
 	
-	- Đặt điều kiện để mẫu khác $$0$$:
-	
-	$$\begin{cases}
-  	\gamma &\not = 0 \\
-   	\gamma &\not = 1
-	\end{cases}$$
+	$$\begin{align}
+	\sum_{i=1}^n (s - y) &= 0 \\
+	ns - \sum_{i=1}^n y &= 0 \\ 
+	s &= \frac{\sum_{i=1}^n y}{n}
+	\end{align}$$
 	
 Nếu để ý kĩ giá trị $$\gamma$$ chính bằng xác suất của True vì tổng của $$y$$ chính là số lần xuất hiện của giá trị True.
 
