@@ -403,7 +403,7 @@ $$x_i \in \mathbb{R}_{j,m}$$: là những phần tử ở trong Leaf Node thứ 
 ### Bước 5:
 {: .no_toc }
 
-Update hàm F_m(x):
+Update hàm $$F_m(x)$$:
 
 $$F_m(x) = F_{m-1}(x) + \nu \sum_{j = 1}^{J_m} \gamma_{j,m} I(x_i \in \mathbb{R}_{j,m})$$
 
@@ -493,7 +493,7 @@ $$Cost = \sum_{x_i \in \mathbb{R}_{j,m}} L(y_i,F_{m-1}(x_i) + \gamma)$$
 
 Lấy Lost Function là MSE:
 
-$$L(y_i,F_{m-1}(x_i) + \gamma) = \frac{1}{2} (y_i - (F_{m-1}(x_i) + \gamma))^2$$
+$$L(y,F_{m-1}(x) + \gamma) = \frac{1}{2} (y - (F_{m-1}(x) + \gamma))^2$$
 
 Ta được:
 
@@ -559,7 +559,7 @@ $$\text{odds} = \frac{True}{False} = \frac{p_{True}}{p_{False}}$$
 
 Giải thích:
 
-- Hàm Cost Function là hàm  Negative Log Likelihood, có dạng:
+- Hàm Cost Function là hàm  Cross Entropy, có dạng:
 
 $$Cost = -\sum_{i=1}^n (y_i \log \sigma(\gamma) + (1-y_i) \log (1 - \sigma(\gamma)))$$
 
@@ -645,6 +645,30 @@ $$\frac{\partial L(y, F(x))}{\partial F(x)} = - (y - \sigma(F(x)))$$
 - Suy ra:
 
 $$r_{i,m} = - \frac{\partial L(y_i, F(x))}{\partial F(x)} = y_i - \sigma(F(x))$$
+
+### Bước 3:
+{: .no_toc }
+
+Tạo ra một Regression Tree để fit vào tập dữ liệu với Label là cột Residual.
+
+### Bước 4:
+{: .no_toc }
+
+(Chút viết)
+
+Giải thích:
+
+Hàm Cost Function của mỗi Leaf Node có công thức:
+
+$$Cost = \sum_{x_i \in \mathbb{R}_{j,m}} L(y_i,F_{m-1}(x_i) + \gamma)$$
+
+Lấy Lost Function là Cross Entropy:
+
+$$L(y, F(x)) = (y \log \sigma(F_{m-1}(x) + \gamma) + (1-y) \log (1 - \sigma(F_{m-1}(x) + \gamma)))$$
+
+Ta được:
+
+$$Cost = \sum_{x_i \in \mathbb{R}_{j,m}} (y_i \log \sigma(F_{m-1}(x_i) + \gamma) + (1-y) \log (1 - \sigma(F_{m-1}(x_i) + \gamma)))^2$$
 
 <hr>
 
