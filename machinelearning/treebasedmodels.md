@@ -592,8 +592,9 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$: là hàm sigmoid theo $$x$$
 	- Vậy đạo hàm Cost theo $$\gamma$$ là:
 	
 	$$\begin{align}
-	\frac{\partial Cost}{\partial \gamma} &= \frac{(s - y)(1 - s)s}{(1 - s)s} \\
-	\frac{\partial Cost}{\partial \gamma} &= (s - y) \\
+	\frac{\partial Cost}{\partial \gamma} &= (1 - s)s \sum_{i=1}^n \frac{s - y}{(1 - s)s} \\
+	\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n \frac{(s - y)(1 - s)s}{(1 - s)s} \\
+	\frac{\partial Cost}{\partial \gamma} &= \sum_{i=1}^n (s - y) \\
 	\end{align}$$
 
 - Cho đạo hàm bằng $$0$$:
@@ -604,7 +605,20 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$: là hàm sigmoid theo $$x$$
 	s &= \frac{\sum_{i=1}^n y}{n}
 	\end{align}$$
 	
-Nếu để ý kĩ giá trị $$\gamma$$ chính bằng xác suất của True vì tổng của $$y$$ chính là số lần xuất hiện của giá trị True.
+  Vậy $$s$$ bằng xác suất của True vì tổng của $$y$$ chính là số lần xuất hiện của giá trị True.
+  
+  Mà:
+  
+	$$\begin{align}
+	s &= \frac{1}{1 + e^{-\gamma}} \\
+	p_{True} &= \frac{1}{1 + e^{-\gamma}} \\
+	e^{-\gamma} &= \frac{1}{p_{True}} - 1 \\
+	-\gamma &= log(\frac{1 - p_{True}}{p_{True}}) \\
+	\gamma &= log(\frac{p_{True}}{1 - p_{True}}) \\
+	\gamma &= log(\frac{p_{True}}{p_{False}}) \\
+	\gamma &= log(odds) \\
+	\end{align}$$
+  
 
 ### Bước 2:
 {: .no_toc }
