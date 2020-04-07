@@ -462,6 +462,7 @@ Với:
 $$F(x)$$: là hàm mới được tạo - cụ thể ở lần đầu này là {F_0(x)}
 
 Giải thích:
+
 - Vì Lost Function có công thức:
 
 $$L(y, F(x)) = \frac{1}{2} (y - F(x))^2$$
@@ -566,7 +567,7 @@ Với:
 
 $$\sigma(x) = \frac{1}{1+e^{-x}}$$: là hàm sigmoid theo $$x$$
 
-- Dùng đạo hàm từng phần (chain rules) để đạo hàm hàm Cost theo $$\lambda$$ trên:
+- Dùng đạo hàm hàm hợp (chain rules) để đạo hàm hàm Cost theo $$\lambda$$ trên:
 
 	- Đặt $$\sigma(\gamma)$$ là $$s$$, ta có: 
 
@@ -622,6 +623,28 @@ $$\sigma(x) = \frac{1}{1+e^{-x}}$$: là hàm sigmoid theo $$x$$
 
 ### Bước 2:
 {: .no_toc }
+
+Tạo Residual ứng với mỗi Sample, giá trị của Residual được tính bằng:
+
+$$r_{i,m} = y_i - F(x)$$
+
+Với:
+
+$$F(x)$$: là hàm mới được tạo - cụ thể ở lần đầu này là {F_0(x)}
+
+Giải thích:
+
+- Vì Lost Function có công thức:
+
+$$L(y, F(x)) = (y_i \log \sigma(\gamma) + (1-y_i) \log (1 - \sigma(\gamma)))$$
+
+- Nên khi đạo hàm theo $$F(x)$$ (tính tương tự đạo hàm hàm Cost), ta được:
+
+$$\frac{\partial L(y, F(x))}{\partial F(x)} = -(y - \sigma(F(x)))$$
+
+- Suy ra:
+
+$$r_{i,m} = - \frac{\partial L(y, F(x))}{\partial F(x)} = y_i - \sigma(F(x))$$
 
 <hr>
 
