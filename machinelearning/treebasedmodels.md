@@ -561,7 +561,7 @@ Giải thích:
 
 - Hàm Cost Function là hàm  Cross Entropy, có dạng:
 
-$$Cost = -\sum_{i=1}^n (y_i \log \sigma(\gamma) + (1-y_i) \log (1 - \sigma(\gamma)))$$
+$$Cost = -\sum_{i=1}^n (y_i \log(\sigma(\gamma)) + (1-y_i) \log (1 - \sigma(\gamma)))$$
 
 Với:
 
@@ -668,7 +668,7 @@ $$L(y, F(x)) = (y \log \sigma(F_{m-1}(x) + \gamma) + (1-y) \log (1 - \sigma(F_{m
 
 Ta được:
 
-$$Cost = \sum_{x_i \in \mathbb{R}_{j,m}} (y_i \log \sigma(F_{m-1}(x_i) + \gamma) + (1-y) \log (1 - \sigma(F_{m-1}(x_i) + \gamma)))^2$$
+$$Cost = \sum_{x_i \in \mathbb{R}_{j,m}} (y_i \log(\sigma(F_{m-1}(x_i) + \gamma)) + (1-y) \log (1 - \sigma(F_{m-1}(x_i) + \gamma)))^2$$
 
 <hr>
 
