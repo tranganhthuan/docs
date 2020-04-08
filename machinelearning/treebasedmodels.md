@@ -677,7 +677,19 @@ $$\frac{\partial Cost}{\partial \gamma} = \sum_{x_i \in \mathbb{R}_{j,m}} (y - \
 Cho hàm này bằng $$0$$, ta được:
 
 $$\begin{align}
-\sum_{x_i \in \mathbb{R}_{j,m}} (y - \sigma(F_{m-1}(x_i) + \gamma)) &= 0 \\
+\sum_{x_i \in \mathbb{R}_{j,m}} (y_i - \sigma(F_{m-1}(x_i) + \gamma)) &= 0 \\
+\sigma(F_{m-1}(x_i) + \gamma) &= \frac{\sum_{x_i \in \mathbb{R}_{j,m}} y_i}{k} \\
+\end{align}$$
+
+Mà:
+
+$$$$
+
+Nên, ta được:
+
+$$\begin{align}
+\frac{1}{1 + e^{-(\sigma(F_{m-1}(x_i) + \gamma)}} &= \frac{\sum_{x_i \in \mathbb{R}_{j,m}} y_i}{k} \\
+1 &= 1 
 \end{align}$$
 
 Mai viết tiếp
