@@ -683,13 +683,12 @@ $$\begin{align}
 
 Mà:
 
-$$$$
+$$\sigma(F_{m-1}(x_i) + \gamma) = \frac{1}{1 + e^{-(F_{m-1}(x_i) + \gamma}}$$
 
 Nên, ta được:
 
 $$\begin{align}
-\frac{1}{1 + e^{-(\sigma(F_{m-1}(x_i) + \gamma)}} &= \frac{\sum_{x_i \in \mathbb{R}_{j,m}} y_i}{k} \\
-1 &= 1 
+\frac{1}{1 + e^{-(F_{m-1}(x_i) + \gamma}} &= \frac{\sum_{x_i \in \mathbb{R}_{j,m}} y_i}{k} \\
 \end{align}$$
 
 Mai viết tiếp
