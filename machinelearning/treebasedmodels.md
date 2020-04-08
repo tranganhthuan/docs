@@ -544,7 +544,7 @@ Kết quả sẽ được dự đoán bằng $$F_M(x)$$.
 
 ## Gradient Boosting - Classification
 
-(Coming soon - Cái ở dưới sai)
+(Học xong odds log(odds) taylor rồi viết tiếp - Cái ở dưới sai rồi nhen)
 
 ### Bước 1:
 {: .no_toc }
@@ -690,8 +690,6 @@ Nên, ta được:
 $$\begin{align}
 \frac{1}{1 + e^{-(F_{m-1}(x_i) + \gamma)}} &= \frac{\sum_{x_i \in \mathbb{R}_{j,m}} y_i}{k} \\
 \end{align}$$
-
-Mai viết tiếp
 
 <hr>
 
