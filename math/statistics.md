@@ -30,6 +30,36 @@ nav_order: 1
 
 ### Trung bình (Mean)
 {: .no_toc }
+**Định nghĩa:**
+
+Là tổng giá trị của các phần tử chia cho tổng số phần tử.
+**Cách tính:**
+
+Tính theo công thức:
+
+$$\text{mean} = \frac{\sum{\mathbf{X}}}{N} $$
+
+### Trung vị (Median)
+{: .no_toc }
+
+**Định nghĩa:**
+
+Là điểm chính giữa của dữ liệu.
+
+**Cách tính:**
+
+Tính theo công thức:
+
+$$\text{median} = \frac{X_{n/2} + X_{(n+2)/2}}{2}$$
+
+**Định nghĩa:**
+
+Là điểm xuất hiện nhiều nhất trong dữ liệu.
+
+**Cách tính:**
+
+Sắp xếp dữ liệu theo thứ tự. Đếm số phần tử trong từng đoạn giống nhau. Tìm ra phần tử có số đếm cao nhất.
+
 
 ## Các đại lượng đặc trưng:
 
