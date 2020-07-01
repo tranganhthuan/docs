@@ -24,9 +24,10 @@ nav_order: 1
 - Mẫu (Sample): Là một phần của mẫu được trích ra để nghiên cứu.
 
 ### Một số cách lấy mẫu (Sampling Methods)
+{: .no_toc }
 ** Để sau **
 
-## Trung bình, Trung vị, Yếu vị
+## Giá trị trung tâm (Measures of Central Tendency)
 
 ### Trung bình (Mean)
 {: .no_toc }
@@ -61,7 +62,7 @@ Là điểm xuất hiện nhiều nhất trong dữ liệu.
 Sắp xếp dữ liệu theo thứ tự. Đếm số phần tử trong từng đoạn giống nhau. Tìm ra phần tử có số đếm cao nhất.
 
 
-## Các đại lượng đặc trưng:
+## Giá trị biến thiên (Measures of Variation):
 
 ### Trung bình
 {: .no_toc }
