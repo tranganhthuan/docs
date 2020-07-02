@@ -35,4 +35,11 @@ $$\begin{bmatrix}
 {: .no_toc}
 
 **Ma trận không:**
+
 Là ma trận có tất cả các phần tử bằng 0, ký hiệu là $$O_{mxn}$$ hoặc $$O$$. 
+
+$$\begin{bmatrix}
+   0 & ... & 0 \\
+   ... & ... & ... \\
+   0 & ... & 0 \\
+\end{bmatrix}$$
