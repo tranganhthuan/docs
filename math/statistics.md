@@ -145,9 +145,39 @@ $$\text{high} = Q3 + 1.5*IQR$$
 
 ### Phân phối đối xứng (Symmetrical Distribution)
 {: .no_toc }
+**Định nghĩa:**
+
+Phân phối của tập dữ liệu đối xứng khi:
+
+$$Q2-Q1 = Q3-Q1$$
+
+hoặc
+
+$$mode = median = mean$$
+
 
 ### Độ lệch dương (Positive Skew - Right Skew)
 {: .no_toc }
 
+**Định nghĩa:**
+
+Phân phối của tập dữ liệu lệch phải khi:
+
+$$Q2-Q1 > Q3-Q1$$
+
+hoặc
+
+$$mode > median > mean$$
+
 ### Độ lệch âm (Negative Skew - Left Skew)
 {: .no_toc }
+
+**Định nghĩa:**
+
+Phân phối của tập dữ liệu lệch trái khi:
+
+$$Q2-Q1 < Q3-Q1$$
+
+hoặc
+
+$$mode < median < mean$$
