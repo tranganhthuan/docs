@@ -27,7 +27,7 @@ nav_order: 1
 {: .no_toc }
 ** Để sau **
 
-## Giá trị trung tâm (Measures of Central Tendency)
+## Giá trị trung tâm của dữ  (Measures of Central Tendency)
 
 ### Trung bình (Mean)
 {: .no_toc }
@@ -47,8 +47,7 @@ $$\text{mean} = \frac{\sum{\mathbf{X}}}{N} $$
 
 Là điểm chính giữa của dữ liệu.
 
-**Cách tính:**
-
+**Cách tính:**liệu
 Tính theo công thức:
 
 $$\text{median} = \frac{X_{n/2} + X_{(n+2)/2}}{2}$$
@@ -61,10 +60,40 @@ Là điểm xuất hiện nhiều nhất trong dữ liệu.
 
 Sắp xếp dữ liệu theo thứ tự. Đếm số phần tử trong từng đoạn giống nhau. Tìm ra phần tử có số đếm cao nhất.
 
+## Phân vị:
 
-## Giá trị biến thiên (Measures of Variation):
+### Tứ phân vị (Quartiles)
+{: .no_toc }
 
-### Khoảng (Range):
+**Định nghĩa:**
+
+Tứ phân vị có 3 giá trị, đó là tứ phân vị thứ nhất, thứ nhì, và thứ ba. Ba giá trị này chia một tập hợp dữ liệu (đã sắp xếp dữ liệu theo trật từ từ bé đến lớn) thành 4 phần có số lượng quan sát đều nhau.
+
+**Cách tính:**
+
+Tính theo công thức:
+
+$$Q1 = X_{(n+1)*1/4}$$
+$$Q2= \frac{X_{n/2} + X_{(n+2)/2}}{2}$$
+$$Q3 = X_{(n+1)*3/4}$$	
+
+### Bách phân vị (Percentiles)
+{: .no_toc }
+
+**Định nghĩa:** 
+
+Số phân vị thứ P là một giá trị mà tại đó nhiều nhất có P% số trường hợp quan sát trong tập dữ liệu có giá trị thấp hơn giá trị này.
+
+**Cách tính:**
+
+Tính theo công thức:
+$$\# \text{ rank} = 100*(\frac{\#\text{ of values below x} + 0.5}{\text{Total } \# \text{ of values}})$$
+
+
+## Độ phân tán của dữ liệu (Measures of Variation):
+
+### Khoảng (Range)
+{: .no_toc }
 
 **Định nghĩa:**
 
@@ -76,11 +105,12 @@ Tính theo công thức:
 
 $$\text{range} = max(X) - min(X)$$
 
-### Độ trải giữa (Inter-quartile Range)
+### Khoảng tứ phân vị (Inter-quartile Range)
+{: .no_toc }
 
 **Định nghĩa:**
 
-Là khoảng giá trị giữa tứ phân vị 1 và tứ phân vị 3
+Là khoảng giá trị giữa tứ phân vị 1 và tứ phân vị 3.
 
 **Cách tính:**
 
@@ -88,9 +118,16 @@ Tính theo công thức:
 
 $$IQR = Q1 - Q3$$
 
-### Trung bình
-{: .no_toc }
+**Áp dụng:**
+- Từ Q1, Q3, IQR ta có thể tính được:
 
-Trung bình của tổng thể (Population mean):
-Là giá trị trung bình của tổng thể.
+$$\text{low} = Q1 - 1.5*IQR$$
+
+$$\text{high} = Q3 + 1.5*IQR$$
+
+- Giá trị nằm ngoài khoảng $$[low,high]$$ được coi là điểm bất thường (outlier).
+
+- low, Q1, Q2, Q3, high là 5 điểm thường được dùng để mô tả dữ liệu (5-number summary).
+
+
 
