@@ -105,7 +105,7 @@ Tính theo công thức:
 
 $$\text{range} = max(X) - min(X)$$
 
-### Khoảng tứ phân vị (Inter-quartile Range)
+### Khoảng tứ phân vị (Inter-quartile Range)
 {: .no_toc }
 
 **Định nghĩa:**
