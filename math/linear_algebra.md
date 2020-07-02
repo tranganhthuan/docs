@@ -43,3 +43,22 @@ $$\begin{bmatrix}
    ... & ... & ... \\
    0 & ... & 0 \\
 \end{bmatrix}$$
+
+**Ma trận bậc thang (Echelon Matrix):**
+
+(cần bổ sung)
+
+Là ma trận có:
+
+- Hàng toàn số 0 (nếu có) thì nằm dưới.
+- Phần từ cơ sở hàng dưới nằm bên phải phần tử cơ sở hàng trên. Với phần tử cơ sở của một hàng là phần tử khác 0 đầu tiên của hàng đó kể từ bên trái sang. Hàng toàn số 0 thì không có phần tử cơ sở.
+
+**Ma trận vuông:**
+
+(cần bổ sung)
+
+Là ma trận có số hàng bằng số cột.
+
+Đường chéo chính của ma trận vuông A đi qua các phần tử $$a_{ij}$$ với $$i = j$$
+
+**Ma trận tam giác:**
