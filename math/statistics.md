@@ -64,9 +64,33 @@ Sắp xếp dữ liệu theo thứ tự. Đếm số phần tử trong từng đ
 
 ## Giá trị biến thiên (Measures of Variation):
 
+### Khoảng (Range):
+
+**Định nghĩa:**
+
+Là khoảng giá trị của dữ liệu.
+
+**Cách tính:**
+
+Tính theo công thức:
+
+$$\text{range} = max(X) - min(X)$$
+
+### Độ trải giữa (Inter-quartile Range)
+
+**Định nghĩa:**
+
+Là khoảng giá trị giữa tứ phân vị 1 và tứ phân vị 3
+
+**Cách tính:**
+
+Tính theo công thức:
+
+$$IQR = Q1 - Q3$$
+
 ### Trung bình
 {: .no_toc }
 
- Trung bình của tổng thể (Population mean):
+Trung bình của tổng thể (Population mean):
 Là giá trị trung bình của tổng thể.
 
