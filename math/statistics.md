@@ -129,5 +129,10 @@ $$\text{high} = Q3 + 1.5*IQR$$
 
 - low, Q1, Q2, Q3, high là 5 điểm thường được dùng để mô tả dữ liệu (5-number summary).
 
+## Các đại lượng đặc trưng của tổng thể và mẫu
 
+|  | Tổng thể | Mẫu |
+|-|-|-|
+| Trung bình (mean) | $$\mu = \frac{\sum_{i=1}^N x_i}{N}$$ | $$\bar{X} = \frac{\sum_{i=1}^n x_i}{n}$$ |
+| Phương sai (variance) | $$\sigma^2 = \frac{\sum_{i=1}^N (x_i - \bar{X})^2}{N}$$ | $$s^2 = \frac{\sum_{i=1}^N (x_i - \bar{X})^2}{n-1}$$ |
 
