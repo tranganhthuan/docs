@@ -13,3 +13,5 @@ search_tokenizer_separator: /[\s/]+/
 # Fix MathJax
 compress_html:
   blanklines: true
+# Color scheme
+color_scheme: my_scheme
