@@ -133,6 +133,23 @@ $$\text{high} = Q3 + 1.5*IQR$$
 
 |  | Tổng thể | Mẫu |
 |-|-|-|
-| Trung bình (mean) | $$\mu = \frac{\sum_{i=1}^N x_i}{N}$$ | $$\bar{X} = \frac{\sum_{i=1}^n x_i}{n}$$ |
-| Phương sai (variance) | $$\sigma^2 = \frac{\sum_{i=1}^N (x_i - \bar{X})^2}{N}$$ | $$s^2 = \frac{\sum_{i=1}^N (x_i - \bar{X})^2}{n-1}$$ |
+| Trung bình (Mean) | $$\mu = \frac{\sum_{i=1}^N x_i}{N}$$ | $$\bar{X} = \frac{\sum_{i=1}^n x_i}{n}$$ |
+| Phương sai (Variance) | $$\sigma^2 = \frac{\sum_{i=1}^N (x_i - \bar{X})^2}{N}$$ | $$s^2 = \frac{\sum_{i=1}^n (x_i - \bar{X})^2}{n-1}$$ |
 
+**Bổ sung:**
+
+- $$\sigma$$ được gọi là Độ lệch chuẩn (Standard Deviation).
+- $$s$$ được gọi là Sai số chuẩn (Standard Error).
+
+## Độ lệch (Skewness)
+
+### Phân phối đối xứng (Symmetrical Distribution)
+
+### Độ lệch dương (Positive Skew - Right Skew)
+{: .no_toc }
+
+### Độ lệch dương (Positive Skew - Right Skew)
+{: .no_toc }
+
+### Độ lệch âm (Negative Skew - Left Skew)
+{: .no_toc }
