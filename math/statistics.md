@@ -144,8 +144,6 @@ $$\text{high} = Q3 + 1.5*IQR$$
 ## Độ lệch (Skewness)
 
 ### Phân phối đối xứng (Symmetrical Distribution)
-
-### Độ lệch dương (Positive Skew - Right Skew)
 {: .no_toc }
 
 ### Độ lệch dương (Positive Skew - Right Skew)
