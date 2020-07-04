@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Trang chủ
 nav_order: 1
 has_toc: false
 permalink: /
