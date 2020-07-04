@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Đại số tuyến tính
-nav_order: 1
+nav_order: 3
 has_toc: false
 has_children: true
 published: true
