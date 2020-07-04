@@ -5,7 +5,9 @@ parent: Thống kê
 nav_order: 1
 ---
 
-## Table of contents
+# Khái niệm chung
+
+## Mục lục
 {: .no_toc .text-delta }
 
 1. TOC
