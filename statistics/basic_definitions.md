@@ -6,9 +6,10 @@ nav_order: 1
 ---
 
 # Khái niệm chung
+{: .no_toc }
 
 ## Mục lục
-{: .no_toc .text-delta }
+{: .no_toc}
 
 1. TOC
 {:toc}
