@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Thống 
+title: Thống kê
 nav_order: 2
 has_toc: true
 has_children: true
