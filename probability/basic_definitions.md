@@ -11,6 +11,9 @@ nav_order: 1
 ## Mục lục
 {: .no_toc}
 
+1. TOC
+{:toc}
+
 ## I. Phép thử, biến cố và không gian mẫu
 
 ### 1. Phép thử (Probabilistic experiment)
