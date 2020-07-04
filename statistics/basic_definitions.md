@@ -27,17 +27,14 @@ nav_order: 1
 - Tổng thể (Population): Là tập hợp tất cả các phần tử của đối tượng cần nghiên cứu.
 - Mẫu (Sample): Là một phần của mẫu được trích ra để nghiên cứu.
 
-### Một số cách lấy mẫu (Sampling Methods)
-{: .no_toc }
-** Để sau **
-
-## Giá trị trung tâm của dữ  (Measures of Central Tendency)
+## Giá trị trung tâm của dữ liệu (Measures of Central Tendency)
 
 ### Trung bình (Mean)
 {: .no_toc }
 **Định nghĩa:**
 
 Là tổng giá trị của các phần tử chia cho tổng số phần tử.
+
 **Cách tính:**
 
 Tính theo công thức:
@@ -51,7 +48,8 @@ $$\text{mean} = \frac{\sum{\mathbf{X}}}{N} $$
 
 Là điểm chính giữa của dữ liệu.
 
-**Cách tính:**liệu
+**Cách tính:**
+
 Tính theo công thức:
 
 $$\text{median} = \frac{X_{n/2} + X_{(n+2)/2}}{2}$$
