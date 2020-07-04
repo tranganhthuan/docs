@@ -34,6 +34,16 @@ $$\begin{bmatrix}
 ### Các dạng ma trận đặc biệt: 
 {: .no_toc}
 
+
+**Ma trận bậc thang (Echelon Matrix) (bổ sung sau):**
+
+(cần bổ sung)
+
+Là ma trận có:
+
+- Hàng toàn số 0 (nếu có) thì nằm dưới.
+- Phần từ cơ sở hàng dưới nằm bên phải phần tử cơ sở hàng trên. Với phần tử cơ sở của một hàng là phần tử khác 0 đầu tiên của hàng đó kể từ bên trái sang. Hàng toàn số 0 thì không có phần tử cơ sở.
+
 **Ma trận không:**
 
 Là ma trận có tất cả các phần tử bằng 0, ký hiệu là $$O_{mxn}$$ hoặc $$O$$. 
@@ -43,15 +53,6 @@ $$\begin{bmatrix}
    ... & ... & ... \\
    0 & ... & 0 \\
 \end{bmatrix}$$
-
-**Ma trận bậc thang (Echelon Matrix):**
-
-(cần bổ sung)
-
-Là ma trận có:
-
-- Hàng toàn số 0 (nếu có) thì nằm dưới.
-- Phần từ cơ sở hàng dưới nằm bên phải phần tử cơ sở hàng trên. Với phần tử cơ sở của một hàng là phần tử khác 0 đầu tiên của hàng đó kể từ bên trái sang. Hàng toàn số 0 thì không có phần tử cơ sở.
 
 **Ma trận vuông:**
 
