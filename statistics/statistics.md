@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Statistics
-parent: Math
-nav_order: 1
+title: Thống 
+nav_order: 2
+has_toc: true
+has_children: true
+published: true
 ---
 ## Table of contents
 {: .no_toc .text-delta }
