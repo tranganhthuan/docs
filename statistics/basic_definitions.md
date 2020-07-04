@@ -62,7 +62,7 @@ Là điểm xuất hiện nhiều nhất trong dữ liệu.
 
 Sắp xếp dữ liệu theo thứ tự. Đếm số phần tử trong từng đoạn giống nhau. Tìm ra phần tử có số đếm cao nhất.
 
-## Phân vị:
+## Phân vị
 
 ### Tứ phân vị (Quartiles)
 {: .no_toc }
@@ -92,7 +92,7 @@ Tính theo công thức:
 $$\# \text{ rank} = 100*(\frac{\#\text{ of values below x} + 0.5}{\text{Total } \# \text{ of values}})$$
 
 
-## Độ phân tán của dữ liệu (Measures of Variation):
+## Độ phân tán của dữ liệu (Measures of Variation)
 
 ### Khoảng (Range)
 {: .no_toc }
