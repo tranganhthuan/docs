@@ -25,6 +25,8 @@ Việc thực hiện một nhóm các điều kiện cơ bản để quan sát m
 
 Tung đồng xu là một phép thử.
 
+<hr/>
+
 ## Biến cố(Event)
 
 **Định nghĩa:**
