@@ -185,3 +185,8 @@ $$Q2-Q1 < Q3-Q1$$
 hoặc
 
 $$mode < median < mean$$
+
+### Tổng kết 
+{: .no_toc }
+
+![](/assets/images/statistics/img_1.pg)
