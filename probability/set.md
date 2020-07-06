@@ -25,10 +25,6 @@ nav_order: 2
 
 Cho $$A$$ và $$B$$ là hai biến cố bất kì, hợp của $$A$$ và $$B$$, là biến cố chứa tất cả các kết quả hoặc chỉ thuộc về $$A$$, hoặc chỉ thuộc về $$B$$, hoặc thuộc về cả $$A$$ lẫn $$B$$. Do vậy, biến cố này xảy ra khi có ít nhất $$A$$ hoặc $$B$$ xảy ra.
 
-(Hình)
-
-Hình 1. Phép hợp
-
 **Ký hiệu:**
 
 $$A \cup B$$ hoặc $$A + B$$
@@ -40,3 +36,39 @@ $$A \cup B$$ hoặc $$A + B$$
 - $$B$$ là biến cố: "Tung xúc xắc ra được mặt 2 chấm"
 
 - $$A \cup B$$ là biến cố: "Tung xúc xắc ra được mặt 1 chấm hoặc 2 chấm"
+
+### Phép giao (Intersection)
+
+**Khái niệm:** 
+Cho A và B là hai biến cố bất kì, giao của A và B, là biến cố chứa tất cả các kết quả cùng thuộc về cả A lẫn B. Do vậy, biến cố này xảy ra khi cả A và B cùng xảy ra.
+
+**Ký hiệu:** 
+
+$$A \cap B$$ hoặc $$A.B$$
+
+**Ví dụ:**
+
+- $$A$$ là biến cố: "Tung xúc xắc ra được mặt chẵn chấm".
+- $$B$$ là biến cố: "Tung xúc xắc ra được mặt nhỏ hơn 3 chấm".
+- $$A \cap B$$ là biến cố: "Tung xúc xắc ra được mặt 2 chấm".
+
+### Phép bù (Complement)
+
+**Khái niệm:** 
+
+Cho A là biến cố bất kì, bù của A là biến cố chứa tất cả biến cố trong không gian mẫu S nhưng không thuộc về A.
+
+**Ký hiệu:**
+
+$$\bar{A}$$ hoặc $$A^c$$
+
+**Ví dụ:**
+
+- $$A$$ là biến cố: "Tung xúc xắc ra được mặt 1 chấm".
+- $$\bar{A}$$ là biến cố: "Tung xúc xắc ra được mặt lớn hơn 1 chấm".
+
+
+### Tổng kết 
+{: .no_toc }
+
+![](/assets/images/probability/img_1.png)
