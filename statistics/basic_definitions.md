@@ -134,7 +134,7 @@ $$\text{high} = Q3 + 1.5*IQR$$
 ## Các đại lượng đặc trưng của tổng thể và mẫu
 
 |  | Tổng thể | Mẫu |
-|-|-|-|
+|:-:|:-:|:-:|
 | Trung bình (Mean) | $$\mu = \frac{\sum_{i=1}^N x_i}{N}$$ | $$\bar{X} = \frac{\sum_{i=1}^n x_i}{n}$$ |
 | Phương sai (Variance) | $$\sigma^2 = \frac{\sum_{i=1}^N (x_i - \bar{X})^2}{N}$$ | $$s^2 = \frac{\sum_{i=1}^n (x_i - \bar{X})^2}{n-1}$$ |
 
