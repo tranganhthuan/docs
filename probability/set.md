@@ -38,6 +38,7 @@ $$A \cup B$$ hoặc $$A + B$$
 - $$A \cup B$$ là biến cố: "Tung xúc xắc ra được mặt 1 chấm hoặc 2 chấm"
 
 ### Phép giao (Intersection)
+{: .no_toc}
 
 **Khái niệm:** 
 
@@ -54,6 +55,7 @@ $$A \cap B$$ hoặc $$A.B$$
 - $$A \cap B$$ là biến cố: "Tung xúc xắc ra được mặt 2 chấm".
 
 ### Phép bù (Complement)
+{: .no_toc}
 
 **Khái niệm:** 
 
