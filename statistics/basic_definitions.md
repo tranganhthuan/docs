@@ -89,6 +89,7 @@ Số phân vị thứ P là một giá trị mà tại đó nhiều nhất có P
 **Cách tính:**
 
 Tính theo công thức:
+
 $$\# \text{ rank} = 100*(\frac{\#\text{ of values below x} + 0.5}{\text{Total } \# \text{ of values}})$$
 
 
@@ -121,6 +122,7 @@ Tính theo công thức:
 $$IQR = Q1 - Q3$$
 
 **Áp dụng:**
+
 - Từ Q1, Q3, IQR ta có thể tính được:
 
 $$\text{low} = Q1 - 1.5*IQR$$
