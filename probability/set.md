@@ -40,6 +40,7 @@ $$A \cup B$$ hoặc $$A + B$$
 ### Phép giao (Intersection)
 
 **Khái niệm:** 
+
 Cho A và B là hai biến cố bất kì, giao của A và B, là biến cố chứa tất cả các kết quả cùng thuộc về cả A lẫn B. Do vậy, biến cố này xảy ra khi cả A và B cùng xảy ra.
 
 **Ký hiệu:** 
@@ -71,7 +72,7 @@ $$\bar{A}$$ hoặc $$A^c$$
 ### Tổng kết 
 {: .no_toc }
 
-![](/assets/images/probability/img_1.png)
+![](/assets/images/probability/img_1.jpg)
 
 <hr/> 
 
