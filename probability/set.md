@@ -72,3 +72,13 @@ $$\bar{A}$$ hoặc $$A^c$$
 {: .no_toc }
 
 ![](/assets/images/probability/img_1.png)
+
+<hr/> 
+
+## Tính chất
+
+| Giao hoán | $$A \cup B = B \cup A$$<br>$$A \cap B = B \cap A$$ |
+|:-:|:-:|
+| Kết hợp | $$A \cup (B \cup C) = (A \cup B) \cup C$$<br>$$A \cap (B \cap C) = (A \cap B) \cap C$$ |
+| Phân phối | $$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$$<br>$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$ |
+| Phần bù | $$\bar{\bar{A}} = A$$<br>$$\overline{A \cup B} = \bar{A} \cap \bar{B}$$<br>$$\overline{A \cap B} = \bar{A} \cup \bar{B}$$ |
