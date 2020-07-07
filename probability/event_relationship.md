@@ -50,5 +50,15 @@ Xung khắc từng đôi thực chất là một cách nói đầy đủ khi nó
 
 Các biến cố $$A_i (i = \overline{1,n})$$ gọi là đối lập với nhau nếu hợp của chúng tạo nên một nhóm biến cố đầy đủ.
 
+**Tính chất:**
+
+$$A_i (i = \overline{1,n})$$ đối lập <=>  $$\sum_{i=1}^n A_i = \Omega$$ và $$A.\bar{A} = \text{\O}$$
+
 **Ví dụ:**
+
+Gọi:
+- $$A$$ là biến cố "Tung xúc xắc được mặt $${1}$$"
+- $$B$$ là biến cố "Tung xúc xắc được mặt là số nguyên tố - $${2,3,5}$$"
+- $$C$$ là biến cố "Tung xúc xắc được mặt chẵn - $${2,4,6}$$"
+$$\implies$$ $$A$$,$$B$$ và $$C$$ là các biến cố đối lập. 
 
