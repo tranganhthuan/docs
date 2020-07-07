@@ -17,7 +17,20 @@ nav_order: 2
 <hr/> 
 
 ## Biến cố độc lập (Independence events)
-(Chút về viết)
+
+### Biến cố độc lập (Independence events)
+
+**Khái niệm:**
+Các biến cố $$A_i (i = \overline{1,n})$$ được gọi là độc lập với nhau nếu việc xảy ra hay không xảy ra của một biến cố không làm thay đổi xác suất xảy ra của các biến cố khác và ngược lại.
+Phân loại:
+Biến cố độc lập có 2 loại: 
+- Độc lập từng đôi (pairwise independent) 
+- Độc lập toàn phần(mutual independence/collective independence). 
+Ví dụ:
+Tung đồng xu nhiều lần:
+- $$A_i$$ là biến cố "Tung được mặt ngửa khi tung đồng xu lần thứ i".
+⇒ Các biến cố $$A_i$$ độc lập với nhau.
+
 
 <hr/>
 
