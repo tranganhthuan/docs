@@ -102,7 +102,7 @@ Xung khắc từng đôi thực chất là một cách nói đầy đủ khi nó
 
 <hr/>
 
-## Biến cố đối lập ()
+## Biến cố đối lập (Partition of a set)
 
 **Khái niệm:**
 
