@@ -2,7 +2,7 @@
 layout: default
 title: Quan hệ giữa các biến cố
 parent: Xác suất
-nav_order: 2
+nav_order: 3
 ---
 
 # Quan hệ giữa các biến cố
