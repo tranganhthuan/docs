@@ -106,7 +106,7 @@ Xung khắc từng đôi thực chất là một cách nói đầy đủ khi nó
 
 **Khái niệm:**
 
-Các biến cố $$A_i (i = \overline{1,n})$$ gọi là đối lập với nhau nếu hợp của chúng tạo nên một nhóm biến cố đầy đủ.
+Các biến cố $$A_i (i = \overline{1,n})$$ gọi là đối lập(collectively exhaustive) với nhau nếu hợp của chúng tạo nên một nhóm biến cố đầy đủ.
 
 **Tính chất:**
 
