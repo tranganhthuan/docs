@@ -4,11 +4,15 @@ title: Ma trận
 parent: Đại số tuyến tính
 nav_order: 1
 ---
-## Table of contents
-{: .no_toc .text-delta }
+# Ma trận
+
+## Mục lục
+{: .no_toc }
 
 1. TOC
 {:toc}
+
+<hr/>
 
 ## Ma trận:
 
