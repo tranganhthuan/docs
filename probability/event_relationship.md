@@ -36,6 +36,39 @@ Tung đồng xu nhiều lần:
 Gọi $$A_i$$ là biến cố "Tung được mặt ngửa khi tung đồng xu lần thứ i".
 $$implies$$ Các biến cố $$A_i$$ độc lập với nhau.
 
+### Độc lập từng đôi (Pairwise independence):
+
+**Khái niệm:**
+
+Các biến cố $$A_i (i = \overline{1,n})$$ được gọi là độc lập từng đôi với nhau nếu 2 biến cố bất kỳ trong n biến cố đó độc lập với nhau. 
+
+**Công thức:**
+
+Các biến cố $$A_i$$ độc lập từng đôi nếu chúng thỏa mãn điều kiện sau:
+	$$P(A_i \cap A_j) = P(A_i)P(A_j)\quad\forall i,j =\overline{1,n}, i \ne j$$
+
+**Ví dụ:**
+
+Tung đồng xu đều đồng chất. Cho 3 biến cố sau:
+- Biến cố $$A$$: Tung được mặt ngửa ở lần thứ nhất.
+- Biến cố $$B$$: Tung được mặt ngửa ở lần thứ hai.
+- Biến cố $$C$$: Mặt đồng xu giống nhau ở hai lần tung.
+$$3$$ biến cố $$A,B,C$$ độc lập từng phần với nhau vì tuy $$A$$ độc lập với $$B$$, $$B$$ độc lập với $$C$$ và $$C$$ độc lập với $$A$$, nhưng $$A$$ không độc lập với $$B \cap C$$.
+
+Cụ thể:
+- Nếu $$A$$ đã xảy ra - lần thứ 1 tung được mặt ngửa, ta không biết lần thứ 2 có được mặt ngửa hay không ($$B$$) hoặc mặt đồng xu ở 2 lần tung có giống nhau hay không ($$C$$). Tương tự nếu $$B$$, $$C$$ xảy ra trước.
+-  Tuy nhiên, nếu $$A$$ và $$B$$ đã xảy ra ta có thể nói được 2 mặt là giống nhau và ngược lại ($$C$$). Điều này có nghĩa hợp của $$A$$, $$B$$ đã làm thay đổi xác suất của $$C$$. Tương tự với trường hợp $$A \cap C$$ hoặc $$B \cap C$$ xảy ra.
+
+### Độc lập toàn phần (mutually independent/collectively independent):
+
+Khái niệm:
+	Các biến cố $$A_i (i = \overline{1,n})$$ gọi là độc lập toàn phần với nhau nếu mỗi biến cố đó độc lập với một tổ hợp bất kỳ các biến cố còn lại.
+Công thức:
+	Các biến cố $$A_i$$ độc lập từng đôi nếu chúng thỏa mãn 2 điều kiện sau:
+	$$P(A_i \cap A_j) = P(A_i)P(A_j)\quad\forall i,j =\overline{1,n}, i \ne j$$
+	$$P(\sum_{i=1}^n A_i) = \sum_{i=1}^nP(A_i)$$
+Ví dụ:
+Tung một con xúc xắc đều đồng chất. Các biến cố tung được mặt 1 chấm ở lần thứ $$i$$ là các biến cố độc lập toàn phần với nhau vì dù ta biết kết quả của một hay nhiều lần tung, thì xác suất của các lần tung còn lại cũng không thay đổi.
 
 <hr/>
 
