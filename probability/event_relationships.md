@@ -19,6 +19,7 @@ nav_order: 2
 ## Biến cố độc lập (Independence events)
 
 ### Biến cố độc lập (Independence events)
+{: .no_toc }
 
 **Khái niệm:**
 
@@ -37,6 +38,7 @@ Gọi $$A_i$$ là biến cố "Tung được mặt ngửa khi tung đồng xu l�
 $$implies$$ Các biến cố $$A_i$$ độc lập với nhau.
 
 ### Độc lập từng đôi (Pairwise independence):
+{: .no_toc }
 
 **Khái niệm:**
 
@@ -59,6 +61,7 @@ Cụ thể:
 -  Tuy nhiên, nếu $$A$$ và $$B$$ đã xảy ra ta có thể nói được 2 mặt là giống nhau và ngược lại ($$C$$). Điều này có nghĩa hợp của $$A$$, $$B$$ đã làm thay đổi xác suất của $$C$$. Tương tự với trường hợp $$A \cap C$$ hoặc $$B \cap C$$ xảy ra.
 
 ### Độc lập toàn phần (Mutual independence/collective independence):
+{: .no_toc }
 
 **Khái niệm:**
 
