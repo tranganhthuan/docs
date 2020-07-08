@@ -21,7 +21,7 @@ nav_order: 2
 
 **Khái niệm:**
 
-Là đại lượng chỉ có độ lớn (magnitude).
+Là một số thuộc một tập số bất kì ($$\N$$,$$\Z$$,$$\Reals$$,...). Có thể hiểu vô hướng là đại lượng chỉ có độ lớn (magnitude).
 
 **Ví dụ:**
 
@@ -29,21 +29,34 @@ Là đại lượng chỉ có độ lớn (magnitude).
 - Khối lượng (Mass) là một đại lượng vô hướng.
 
 ### Véc tơ (Vector)
+{: .no_toc}
 
 **Khái niệm:**
 
-Là đại lượng có độ lớn và hướng (direction).
+Là một dãy các số (vô hướng) - 1 chiều. Có thể hiểu véc tơ là:
+- Đại lượng có độ lớn và hướng (direction), với cách hiểu này véc tơ là 1 mũi tên có độ dài chỉ độ lớn của véc tơ và hướng của mũi tên chỉ hướng của véc tơ.
+- Điểm trong không gian với mỗi số trong véc tơ là tọa độ của véc tơ trong chiều không gian tương ứng.
 
 **Ví dụ:**
 
 - Vận tốc (Velocity) là một đại lượng vô hướng.
 - Trọng lượng (Weight) là một đại lượng vô hướng.
 
+**Kí hiệu:**
+
+$$\vec{AB}$$,$$\vec{a}$$ hoặc $$\bold{a}$$ 
+
 **Biểu diễn:**
 
-Véc tơ được biểu diễn bằng 1 mũi tên với:
+- Véc tơ hàng có dạng:
 
-- Độ dài chỉ độ lớn của véc tơ
-- Hướng của mũi tên chỉ hướng của véc tơ
+$$\begin{bmatrix}
+   x_1 & x_2 & ... & x_n
+\end{bmatrix}$$
 
-**Kí hiệu:**
+- Véc tơ cột có dạng:
+
+$$\begin{bmatrix}
+   x_1 \\ x_2 \\ ... \\ x_n
+\end{bmatrix}$$
+
