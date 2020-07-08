@@ -21,7 +21,7 @@ nav_order: 2
 
 **Khái niệm:**
 
-Là một số thuộc một tập số bất kì ($$\N$$,$$\Z$$,$$\Reals$$,...). Có thể hiểu vô hướng là đại lượng chỉ có độ lớn (magnitude).
+Là một số thuộc một tập số bất kì ($$\mathbb{N}$$,$$\mathbb{Z}$$,$$\mathbb{R}$$,...). Có thể hiểu vô hướng là đại lượng chỉ có độ lớn (magnitude).
 
 **Ví dụ:**
 
@@ -44,7 +44,7 @@ Là một dãy các số (vô hướng) - 1 chiều. Có thể hiểu véc tơ l
 
 **Kí hiệu:**
 
-$$\vec{AB}$$,$$\vec{a}$$ hoặc $$\bold{a}$$ 
+$$\vec{AB}$$,$$\vec{a}$$ hoặc $$\mathbf{a}$$ 
 
 **Biểu diễn:**
 
