@@ -2,7 +2,7 @@
 layout: default
 title: Ma trận
 parent: Đại số tuyến tính
-nav_order: 1
+nav_order: 2
 ---
 # Ma trận
 
