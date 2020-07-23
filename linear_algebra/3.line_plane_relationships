@@ -1,0 +1,134 @@
+---
+layout: default
+title: Quan hệ giữa đường thẳng và mặt phẳng
+parent: Đại số tuyến tính
+nav_order: 3
+---
+# Quan hệ của đường thẳng và mặt phẳng
+{: .no_toc }
+
+## Mục lục
+{: .no_toc }
+
+1. TOC
+{:toc}
+
+<hr/>
+
+## Giữa đường thẳng và đường thẳng:
+
+Cho 2 đường thẳng:
+
+- Đường thẳng $$L_1$$ đi qua điểm $$A(a_x,a_y,a_z)$$ và song song với véc tơ $$\vec{v}(v_x,v_y,v_z)$$
+
+$$\begin{cases}
+   x = a_x + v_x t \\
+   y = a_y + v_y t \\
+   z = a_z + v_z t
+\end{cases}$$
+
+- Đường thẳng $$L_2$$ đi qua điểm $$B(b_x,b_y,b_z)$$ và song song với véc tơ $$\vec{u}(u_x,u_y,u_z)$$
+
+$$\begin{cases}
+   x = b_x + u_x t' \\
+   y = b_y + u_y t' \\
+   z = b_z + u_z t'
+\end{cases}$$
+
+Hệ phương trình của hai đường thẳng này được lập bằng cách kết hợp 2 trong 3 phương trình của 2 đường thẳng:
+
+$$\begin{cases}
+   v_x t - u_x t' = b_x - a_x \\
+   v_y t - u_y t' = b_y - a_y
+\end{cases}$$
+
+hoặc
+
+
+$$\begin{cases}
+   v_y t - u_y t' = b_y - a_y \\
+   v_z t - u_z t' = b_z - a_z 
+\end{cases}$$
+
+hoặc
+
+$$\begin{cases}
+   v_z t - u_z t' = b_z - a_z \\
+   v_x t - u_x t' = b_x - a_x
+\end{cases}$$
+
+| Quan hệ  | Điều kiện |
+|-|-|
+| Giao nhau (Intersect) | - Phương trình một nghiệm |
+| Trùng nhau (Coincidence) | - Phương trình vô số nghiệm |
+| Song song (Parallel) | - Phương trình vô nghiệm <br/> - $$\vec{u}$$ song song $$\vec{v}$$ |
+| Chéo nhau (Skew) | - Phương trình vô nghiệm <br/> - $$\vec{u}$$ không song song $$ \vec{v}$$ |
+
+## Giữa mặt phẳng và mặt phẳng:
+
+Cho 2 mặt phẳng:
+
+- Mặt phẳng $$P_1$$ đi qua điểm $$A(a_x,a_y,a_z)$$ và vuông góc với véc tơ $$\vec{v}(v_x,v_y,v_z)$$
+
+$$v_x(x – a_x) + v_y(y – a_y) + v_z(z – a_z) = 0$$
+
+- Mặt phẳng $$P_2$$ đi qua điểm $$B(b_x,b_y,b_z)$$ và vuông góc với véc tơ $$\vec{u}(u_x,u_y,u_z)$$
+ 
+$$u_x(x – b_x) + u_y(y – b_y) + u_z(z – b_z) = 0$$
+
+| Quan hệ  | Điều kiện |
+|-|-|
+| Giao nhau (Intersect) | - $$\vec{u}$$ không song song $$\vec{v}$$  |
+| Trùng nhau (Coincidence) | - $$\vec{u}$$ song song $$\vec{v}$$ <br/> - $$B$$ thuộc $$P_1$$ hoặc $$A$$ thuộc $$P_2$$  |
+| Song song (Parallel) | - $$\vec{u}$$ song song $$\vec{v}$$ <br/> - $$B$$ không thuộc $$P_1$$ hoặc $$A$$ không thuộc $$P_2$$  |
+
+Phương trình đường thẳng giao nhau giữa 2 mặt phẳng có thể tìm bằng cách:
+
+- Lập hệ phương trình của hai mặt phẳng:
+
+$$\begin{cases}
+   v_x(x – a_x) + v_y(y – a_y) + v_z(z – a_z) = 0 (1) \\
+   u_x(x – b_x) + u_y(y – b_y) + u_z(z – b_z) = 0 (2)
+\end{cases}$$
+
+- Dựa vào phương trình (1) tìm được $$z$$ theo $$x$$, $$y$$ rồi thay vào $$z$$ ở phương trình (2). Sau đó, tính $$x$$ theo $$y$$.
+
+- Cho $$y = 0$$, tìm được $$x$$. Rồi thay $$x$$, $$y$$ vào (1) tìm được $$z$$.
+
+- Gọi điểm có tọa độ $$(x,y,z)$$ vừa tìm được là $$T$$.
+
+- Tìm tích có hướng $$\vec{n}$$ của hai véc tơ $$\vec{v}$$ và $$\vec{u}$$.
+
+- Viết phương trình đường thẳng dựa vào điểm $$T$$ và véc tơ $$\vec{n}$$.
+
+## Giữa đường thẳng và mặt phẳng:
+
+Cho 1 đường thẳng và 1 mặt phẳng:
+
+- Đường thẳng $$L$$ đi qua điểm $$A(a_x,a_y,a_z)$$ và song song với véc tơ $$\vec{v}(v_x,v_y,v_z)$$
+
+$$\begin{cases}
+   x = a_x + v_x t \\
+   y = a_y + v_y t \\
+   z = a_z + v_z t
+\end{cases}$$
+
+- Mặt phẳng $$P$$ đi qua điểm $$B(b_x,b_y,b_z)$$ và vuông góc với véc tơ $$\vec{u}(u_x,u_y,u_z)$$
+
+$$u_x(x – b_x) + u_y(y – b_y) + u_z(z – b_z) = 0$$
+
+| Quan hệ  | Điều kiện |
+|-|-|
+| Giao nhau (Intersect) | - $$\vec{v}$$ không vuông góc $$\vec{u}$$ |
+| Trùng nhau (Coincidence) | - $$\vec{v}$$ vuông góc $$\vec{u}$$<br>- $$\vec{AB}$$ vuông góc $$\vec{u}$$ |
+| Song song (Parallel) | - $$\vec{v}$$ vuông góc $$\vec{u}$$<br>- $$\vec{AB}$$ không vuông góc $$\vec{u}$$ |
+
+Giao điểm giữa đường thẳng và mặt phẳng có thể tìm được bằng cách:
+
+- Thay $$x$$, $$y$$, $$z$$ trong phương trinh mặt phẳng theo $$t$$.
+
+$$u_x(a_x + v_x t – b_x) + u_y(a_y + v_y t – b_y) + u_z(a_z + v_z t – b_z) = 0$$
+
+- Tìm $$t$$.
+
+- Thay ngược về phương trình đường thẳng.
