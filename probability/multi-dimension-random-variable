@@ -1,0 +1,47 @@
+---
+layout: default
+title: Biến ngẫu nhiên nhiều chiều
+parent: Xác suất
+nav_order: 6
+---
+
+# Biến ngẫu nhiên
+{: .no_toc }
+
+## Mục lục
+{: .no_toc}
+
+1. TOC
+{:toc}
+
+<hr/> 
+
+## Biến ngẫu nhiên nhiều chiều
+
+**Định nghĩa:**
+
+Biến ngẫu nhiên nhiều chiều thực chất là hệ nhi biến ngẫu nhiên một chiều được xét đồng thời.
+
+**Công thức:**
+
+Công thức biến ngẫu nhiên nhiều chiều có thể được tổng quát hóa từ biến ngẫu nhiên hai chiều.
+
+<hr/>
+
+## Biến ngẫu nhiên 2 chiều 
+
+**Định nghĩa:**
+
+Biến ngẫu nhiên 2 chiều là hệ 2 biến ngẫu nhiên một chiều được xét đồng thời.
+
+**Ký hiệu:**
+
+$$(X,Y)$$
+
+**Phân loại:**
+
+| Phân loại | Định nghĩa: |
+|-|-|
+| Biến ngẫu nhiên 2 chiều rời rạc | Là hợp của 2 biến ngẫu nhiên rời rạc. |
+| Biến ngẫu nhiên 2 chiều liên tục | Là hợp của 2 biến ngẫu nhiên liên tục. |
+| Biến ngẫu nhiên 2 chiều hỗn hợp | Là hợp của 1 biến ngẫu nhiên rời rạc và 1 biến ngẫu nhiên liên tục. |
