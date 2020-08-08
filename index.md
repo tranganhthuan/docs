@@ -6,6 +6,6 @@ has_toc: false
 permalink: /
 ---
 
-# docs.ml
+# tnat
 
-Là website tổng hợp lý thuyết và công thức liên quan đến Machine Learning.
+Tổng hợp kiến thức đã học (không public nên không ghi nguồn).
