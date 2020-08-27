@@ -2,7 +2,7 @@
 layout: default
 title: Tree based models
 nav_order: 4
-parent: Machine Learning
+parent: Học máy
 ---
 # Treebased models
 {: .no_toc }
